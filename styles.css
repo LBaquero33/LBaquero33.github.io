@@ -243,10 +243,128 @@ img { display: block; }
 }
 .feature-copy > a:hover,
 .feature-copy > a:focus-visible { border-bottom-color: transparent; }
-.feature-project + .feature-project { margin-top: 28px; }
-.butler-feature .feature-image img { object-fit: cover; object-position: top center; }
-.butler-feature .feature-copy .project-type { color: #69c7ff; }
-.butler-feature .feature-copy > a { color: #69c7ff; border-bottom-color: #69c7ff; }
+.butler-project {
+  max-width: 1400px;
+  margin: 28px auto 0;
+  padding: clamp(34px, 5vw, 72px);
+  background: #08131e;
+  color: white;
+}
+.butler-heading {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(300px, .85fr);
+  gap: clamp(38px, 7vw, 96px);
+  align-items: end;
+}
+.butler-heading .project-type,
+.butler-evidence-heading .project-type { color: #68c7f2; }
+.butler-heading h3 {
+  margin: 15px 0 0;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(45px, 5.7vw, 78px);
+  line-height: .98;
+  letter-spacing: -.045em;
+}
+.butler-intro p,
+.butler-evidence-heading > p:last-child {
+  margin: 0 0 14px;
+  color: rgba(255,255,255,.68);
+  font-size: 14px;
+  line-height: 1.65;
+}
+.butler-intro a {
+  display: inline-block;
+  margin-top: 11px;
+  padding-bottom: 5px;
+  border-bottom: 1px solid #68c7f2;
+  color: #68c7f2;
+  font-size: 12px;
+  font-weight: 750;
+}
+.butler-intro a:hover,
+.butler-intro a:focus-visible { border-bottom-color: transparent; }
+.butler-flight {
+  margin: clamp(42px, 6vw, 78px) 0 0;
+  border: 1px solid rgba(132, 166, 190, .28);
+  background: #0b1724;
+}
+.butler-flight img {
+  width: 100%;
+  aspect-ratio: 720 / 509;
+  object-fit: cover;
+}
+.butler-flight figcaption,
+.butler-angle-grid figcaption {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+.butler-flight figcaption {
+  padding: 16px 18px;
+  border-top: 1px solid rgba(132, 166, 190, .2);
+  font-size: 11px;
+  color: rgba(255,255,255,.62);
+}
+.butler-flight figcaption span:first-child { color: white; font-weight: 700; }
+.butler-angle-grid {
+  margin-top: 18px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+.butler-angle-grid figure,
+.butler-graph-grid figure { margin: 0; }
+.butler-angle-grid figure {
+  border-top: 3px solid #68c7f2;
+  background: #0b1724;
+}
+.butler-angle-grid img,
+.butler-graph-grid img {
+  width: 100%;
+  height: auto;
+}
+.butler-angle-grid figcaption {
+  padding: 13px 14px 15px;
+  align-items: baseline;
+  border-top: 1px solid rgba(132, 166, 190, .2);
+  font-size: 10px;
+  color: rgba(255,255,255,.5);
+}
+.butler-angle-grid figcaption strong {
+  color: white;
+  font-size: 11px;
+  font-weight: 700;
+}
+.butler-evidence {
+  margin-top: clamp(54px, 7vw, 88px);
+  padding-top: 28px;
+  border-top: 1px solid rgba(132, 166, 190, .3);
+}
+.butler-evidence-heading {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  margin-bottom: 28px;
+}
+.butler-evidence-heading > p:last-child { max-width: 610px; }
+.butler-graph-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+}
+.butler-graph-grid figure {
+  padding: 8px 8px 0;
+  background: #0b1724;
+  border: 1px solid rgba(132, 166, 190, .22);
+}
+.butler-graph-grid .wide-graph { grid-column: 1 / -1; }
+.butler-graph-grid figcaption {
+  padding: 12px 8px 14px;
+  font-size: 10px;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,.58);
+}
 
 .report-project {
   max-width: 1400px;
@@ -443,7 +561,8 @@ footer a:hover, footer a:focus-visible { color: white; }
   .hero { grid-template-columns: 1fr minmax(240px, .5fr); }
   .section-intro,
   .project-heading,
-  .about-section { grid-template-columns: 1fr; }
+  .about-section,
+  .butler-heading { grid-template-columns: 1fr; }
   .section-intro > p:not(.eyebrow) { margin-top: 24px; }
   .project-summary { max-width: 650px; }
   .experience-list article { grid-template-columns: 160px 1fr; }
@@ -460,6 +579,15 @@ footer a:hover, footer a:focus-visible { color: white; }
   .portrait { max-width: 390px; }
   .feature-project { grid-template-columns: 1fr; }
   .feature-image { min-height: 300px; }
+  .butler-project { padding: 34px 18px; }
+  .butler-angle-grid,
+  .butler-graph-grid,
+  .butler-evidence-heading { grid-template-columns: 1fr; }
+  .butler-graph-grid .wide-graph { grid-column: auto; }
+  .butler-flight figcaption,
+  .butler-angle-grid figcaption { display: block; }
+  .butler-flight figcaption span,
+  .butler-angle-grid figcaption span { display: block; margin-top: 5px; }
   .report-images { grid-template-columns: 1fr; }
   .report-images figure { min-height: 430px; }
   .image-project,

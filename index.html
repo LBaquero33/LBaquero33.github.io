@@ -69,20 +69,65 @@
         </div>
       </article>
 
-      <article class="feature-project butler-feature">
-        <div class="feature-image">
-          <img src="butler-pitch-tunnel.jpg" alt="Butler Pitch Tunnel Shiny application setup screen">
+      <article class="butler-project" aria-labelledby="butler-title">
+        <header class="butler-heading">
+          <div>
+            <p class="project-type">Pitch-flight analysis / player development</p>
+            <h3 id="butler-title">Butler Pitch Tunnel</h3>
+          </div>
+          <div class="butler-intro">
+            <p>Reconstructs individual TrackMan trajectories to find pitch pairs that hold the same visual lane early and separate after the hitter must decide.</p>
+            <p>This Butler slider–fastball pair starts from nearly the same release and finishes roughly 16 inches apart.</p>
+            <a href="https://ltbaquero.shinyapps.io/DHDApp/" target="_blank" rel="noreferrer">Open the live analysis ↗</a>
+          </div>
+        </header>
+
+        <figure class="butler-flight">
+          <img src="butler-tunnel-flight.gif" alt="Animated hitter-view comparison of a Butler slider and fastball traveling toward home plate">
+          <figcaption>
+            <span>Same release. Similar early flight. Late separation.</span>
+            <span>Hitter view · 0.25× playback</span>
+          </figcaption>
+        </figure>
+
+        <div class="butler-angle-grid" aria-label="Pitch tunnel camera angles">
+          <figure>
+            <img src="butler-tunnel-hitter.jpg" alt="Hitter view of Butler slider and fastball trajectories" loading="lazy">
+            <figcaption><strong>Hitter view</strong><span>What the batter sees</span></figcaption>
+          </figure>
+          <figure>
+            <img src="butler-tunnel-pitcher.jpg" alt="Pitcher view of Butler slider and fastball trajectories" loading="lazy">
+            <figcaption><strong>Pitcher view</strong><span>Flight from the mound</span></figcaption>
+          </figure>
+          <figure>
+            <img src="butler-tunnel-side.jpg" alt="Side view of Butler slider and fastball trajectories" loading="lazy">
+            <figcaption><strong>Side view</strong><span>Vertical separation through flight</span></figcaption>
+          </figure>
         </div>
-        <div class="feature-copy">
-          <p class="project-type">Pitch-flight analysis / player development</p>
-          <h3>Butler Pitch Tunnel</h3>
-          <p>Reconstructs actual individual TrackMan trajectories to find pitch pairs that look similar early and separate late.</p>
-          <p>Includes synchronized flight views, release geometry, movement and spin analysis, arsenal context, game changes, coach notes, and research validation.</p>
-          <dl>
-            <div><dt>Built with</dt><dd>R, Shiny, Plotly, TrackMan</dd></div>
-            <div><dt>Dataset</dt><dd>6,573 Butler pitches from 17 pitchers</dd></div>
-          </dl>
-          <a href="https://ltbaquero.shinyapps.io/DHDApp/" target="_blank" rel="noreferrer">Open the live Shiny app ↗</a>
+
+        <div class="butler-evidence">
+          <div class="butler-evidence-heading">
+            <p class="project-type">Supporting analysis</p>
+            <p>Release geometry, the separation curve, pitch shape, and spin context explain why the pair works—not just what the animation looks like.</p>
+          </div>
+          <div class="butler-graph-grid">
+            <figure>
+              <img src="butler-release-check.jpg" alt="Butler release-point comparison for a slider and fastball" loading="lazy">
+              <figcaption>Release check</figcaption>
+            </figure>
+            <figure>
+              <img src="butler-separation.jpg" alt="Butler slider and fastball tunnel separation curve" loading="lazy">
+              <figcaption>Separation through flight</figcaption>
+            </figure>
+            <figure class="wide-graph">
+              <img src="butler-pitch-shape.jpg" alt="Modeled pitch-shape change from release to home plate" loading="lazy">
+              <figcaption>How pitch shape develops on the way in</figcaption>
+            </figure>
+            <figure class="wide-graph">
+              <img src="butler-spin-movement.jpg" alt="Butler pitch spin and movement clusters by pitch type" loading="lazy">
+              <figcaption>Spin and movement context across the arsenal</figcaption>
+            </figure>
+          </div>
         </div>
       </article>
 
