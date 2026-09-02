@@ -1,0 +1,232 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Lucas Baquero's baseball player development, programming, analytics, and scouting portfolio.">
+  <meta property="og:title" content="Lucas Baquero | Baseball Technology Portfolio">
+  <meta property="og:description" content="Baseball player development, programming, analytics, and scouting projects.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://lbaquero33.github.io/">
+  <meta property="og:image" content="https://lbaquero33.github.io/og-editorial.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <title>Lucas Baquero | Baseball Technology Portfolio</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main id="top">
+    <header class="site-header">
+      <a class="nameplate" href="#top">Lucas Baquero</a>
+      <nav aria-label="Main navigation">
+        <a href="#work">Projects</a>
+        <a href="#experience">Experience</a>
+        <a href="#about">About</a>
+      </nav>
+      <a class="resume-link" href="Lucas_Baquero_Resume.pdf" download>Download résumé</a>
+    </header>
+
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="eyebrow">Baseball technology portfolio</p>
+        <h1 id="hero-title">Baseball player development, programming, and scouting.</h1>
+        <p class="hero-lede">I’m Lucas Baquero. I build baseball analytics tools, scouting reports, and player-development applications in R, Python, Swift, and Shiny.</p>
+        <div class="hero-links">
+          <a href="#work">View selected work ↗</a>
+          <a href="mailto:Lucas.Baquero1@marist.edu">Lucas.Baquero1@marist.edu</a>
+        </div>
+      </div>
+      <figure class="portrait">
+        <div class="portrait-frame">
+          <img src="lucas-headshot.png" alt="Lucas Baquero">
+        </div>
+        <figcaption>
+          <span>Marist University</span>
+          <span>Poughkeepsie, New York</span>
+        </figcaption>
+      </figure>
+    </section>
+
+    <section class="work-section" id="work">
+      <div class="section-intro">
+        <p class="eyebrow">Selected work</p>
+        <h2>Tools made for actual baseball decisions.</h2>
+        <p>Products and reports for player development, scouting, pitch planning, and coach communication.</p>
+      </div>
+
+      <article class="feature-project">
+        <div class="feature-image">
+          <img src="commandiq.jpeg" alt="CommandIQ computer-vision target overlay on game video">
+        </div>
+        <div class="feature-copy">
+          <p class="project-type">Computer vision / pitch review</p>
+          <h3>CommandIQ</h3>
+          <p>Bullpen command workflow for TrackMan and Rapsodo-style CSVs, intended-target entry, and multi-pitch review.</p>
+          <p>Supports video-assisted suggestions with user confirmation, session history, cloud persistence, and report export.</p>
+          <dl>
+            <div><dt>Built with</dt><dd>Swift, Python, Supabase</dd></div>
+            <div><dt>Focus</dt><dd>Computer vision and command review</dd></div>
+          </dl>
+        </div>
+      </article>
+
+      <article class="feature-project butler-feature">
+        <div class="feature-image">
+          <img src="butler-pitch-tunnel.jpg" alt="Butler Pitch Tunnel Shiny application setup screen">
+        </div>
+        <div class="feature-copy">
+          <p class="project-type">Pitch-flight analysis / player development</p>
+          <h3>Butler Pitch Tunnel</h3>
+          <p>Reconstructs actual individual TrackMan trajectories to find pitch pairs that look similar early and separate late.</p>
+          <p>Includes synchronized flight views, release geometry, movement and spin analysis, arsenal context, game changes, coach notes, and research validation.</p>
+          <dl>
+            <div><dt>Built with</dt><dd>R, Shiny, Plotly, TrackMan</dd></div>
+            <div><dt>Dataset</dt><dd>6,573 Butler pitches from 17 pitchers</dd></div>
+          </dl>
+          <a href="https://ltbaquero.shinyapps.io/DHDApp/" target="_blank" rel="noreferrer">Open the live Shiny app ↗</a>
+        </div>
+      </article>
+
+      <article class="report-project">
+        <div class="project-heading">
+          <div>
+            <p class="project-type">College player development</p>
+            <h3>Base Player Development Dashboard: College Baseball</h3>
+          </div>
+          <div class="project-summary">
+            <p>Tracks hitting and pitching progress over time using TrackMan-exportable data.</p>
+            <p>Generates context-driven reports for players and coaches and connects results to individual goals.</p>
+            <a href="https://ltbaquero.shinyapps.io/Marist_App/" target="_blank" rel="noreferrer">Open the app ↗</a>
+          </div>
+        </div>
+        <div class="report-images">
+          <figure>
+            <img src="ballfox-hitter.jpg" alt="Two-strike hitter dashboard from the Ball Fox app" loading="lazy">
+            <figcaption>Hitter report — two-strike dashboard</figcaption>
+          </figure>
+          <figure>
+            <img src="ballfox-pitcher.jpg" alt="Pitcher summary report from the Ball Fox app" loading="lazy">
+            <figcaption>Pitcher report — usage, results, and command</figcaption>
+          </figure>
+        </div>
+      </article>
+
+      <div class="project-list">
+        <article class="listed-project image-project">
+          <div class="project-image-small">
+            <img src="pitch-sequencer.jpg" alt="MLB Attack count-by-count pitch sequencer" loading="lazy">
+          </div>
+          <div>
+            <p class="project-type">Pitch planning</p>
+            <h3>MLB Attack — Pitch Sequencer</h3>
+            <p>Generates count-by-count primary and backup pitch-location options from hitter tendencies and selected pitcher context.</p>
+            <p class="stack">R, Shiny, pitch planning</p>
+          </div>
+        </article>
+
+        <article class="listed-project model-project">
+          <div class="project-logo">
+            <img src="sportsforce.png" alt="SportsForce Baseball" width="72" height="72" loading="lazy">
+          </div>
+          <div>
+            <p class="project-type">Baseball analytics</p>
+            <h3>Hitter Damage &amp; Swing Efficiency Model</h3>
+            <p>Processed 1.25M+ MLB Statcast pitches, modeled hitter damage and swing efficiency, performed year-forward validation, and generated interactive scouting reports with MLB-calibrated percentiles and 20–80 grades.</p>
+            <p class="stack">R, Shiny, Python, TrackMan, MLB Statcast</p>
+          </div>
+        </article>
+
+        <article class="listed-project compact-project">
+          <div class="project-logo">
+            <img src="dhd.png" alt="Diamond Hitting Development" width="72" height="72" loading="lazy">
+          </div>
+          <div>
+            <p class="project-type">Player development</p>
+            <h3>DHD Self-Development App</h3>
+            <p>Tracks strength and conditioning and hitting development using role-based coach and player workflows, daily logs, calendars, and progress data.</p>
+            <a href="https://apps.apple.com/us/app/diamond-hitting/id6786881967" target="_blank" rel="noreferrer">View on the App Store ↗</a>
+          </div>
+        </article>
+
+        <article class="listed-project compact-project text-only">
+          <div>
+            <p class="project-type">Scouting and roster management</p>
+            <h3>SelfScout</h3>
+            <p>Player profiles, hitter and pitcher reports, evaluations, boards, roster planning, and configurable 20–80 reporting.</p>
+            <a href="https://apps.apple.com/us/app/selfscoutmobile/id6786910260" target="_blank" rel="noreferrer">View on the App Store ↗</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="experience-section" id="experience">
+      <div class="section-intro section-intro-light">
+        <p class="eyebrow">Experience</p>
+        <h2>Sports communication, baseball judgment, and software.</h2>
+      </div>
+      <div class="experience-list">
+        <article>
+          <div class="experience-when"><p>April 2026 - Current</p><span>Remote</span></div>
+          <div class="experience-role"><h3>Baseball Data &amp; Development Intern</h3><p>Diamond Hitting Development</p></div>
+          <p class="experience-detail">Leads the creation of internal data systems and external user interfaces for DHD clients.</p>
+        </article>
+        <article>
+          <div class="experience-when"><p>Summer 2026</p><span>Remote</span></div>
+          <div class="experience-role"><h3>Scouting Intern</h3><p>SportsForce Baseball</p></div>
+          <p class="experience-detail">Video- and metric-based evaluation of uncommitted hitters and pitchers, recruiting support, and ad hoc data projects in R and Python.</p>
+        </article>
+        <article>
+          <div class="experience-when"><p>August 2024 - December 2025</p><span>Poughkeepsie, NY</span></div>
+          <div class="experience-role"><h3>Offensive Line Student Assistant</h3><p>Marist Football (D1, FCS)</p></div>
+          <p class="experience-detail">Play signaling, recruiting and player-personnel tasks, on-field coaching, and football operations.</p>
+        </article>
+        <article>
+          <div class="experience-when"><p>August 2025 - Present</p><span>Poughkeepsie, NY</span></div>
+          <div class="experience-role"><h3>Associate Producer</h3><p>The Red Fox Report</p></div>
+          <p class="experience-detail">Produces Red Fox Report episodes for ESPN+ and YouTube, leads meetings, creates rundowns, and supports student contributors.</p>
+        </article>
+        <article>
+          <div class="experience-when"><p>March 2024 - Present</p><span>Long Island, NY</span></div>
+          <div class="experience-role"><h3>Umpire</h3><p>Big Apple Umpires</p></div>
+          <p class="experience-detail">Umpires 8U through 15U baseball throughout Long Island.</p>
+        </article>
+        <article>
+          <div class="experience-when"><p>February 2023 - March 2024</p><span>Queens, NY</span></div>
+          <div class="experience-role"><h3>Assistant Coach, 8U/10U</h3><p>Hard90 Baseball</p></div>
+          <p class="experience-detail">Taught hitting, fielding, and pitching in individual, group, and full-team settings.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="about-section" id="about">
+      <div>
+        <p class="eyebrow">About</p>
+        <h2>Sports communication, baseball judgment, and software.</h2>
+      </div>
+      <div class="about-copy">
+        <p>I’m a Sports Communication student at Marist University with a 3.69 GPA.</p>
+        <p>My work focuses on baseball player development, programming, and scouting.</p>
+        <dl>
+          <div><dt>Programming</dt><dd>R, Python, Swift, SwiftUI, TypeScript, React, Supabase</dd></div>
+          <div><dt>Baseball data</dt><dd>TrackMan, Rapsodo, HitTrax, Blast Motion, MLB Statcast</dd></div>
+          <div><dt>Scouting</dt><dd>Video evaluation, metric evaluation, 20–80 grades, report writing</dd></div>
+        </dl>
+      </div>
+    </section>
+
+    <section class="contact-section">
+      <p class="eyebrow">Contact</p>
+      <a href="mailto:Lucas.Baquero1@marist.edu">Lucas.Baquero1@marist.edu <span aria-hidden="true">↗</span></a>
+      <p>917-658-2985</p>
+    </section>
+
+    <footer>
+      <p>© 2026 Lucas Baquero</p>
+      <div>
+        <a href="Lucas_Baquero_Resume.pdf" download>Résumé</a>
+        <a href="https://github.com/LBaquero33" target="_blank" rel="noreferrer">GitHub</a>
+      </div>
+      <a href="#top">Back to top ↑</a>
+    </footer>
+  </main>
+</body>
+</html>
