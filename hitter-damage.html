@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Hitter Damage and Swing Efficiency Model, Lucas Baquero's R, Shiny, and Python baseball analytics project.">
+  <meta property="og:title" content="Hitter Damage &amp; Swing Efficiency Model | Lucas Baquero">
+  <meta property="og:description" content="A transparent hitter model built from 1.25M+ MLB Statcast pitches with year-forward validation and MLB-calibrated 20–80 grades.">
+  <meta property="og:type" content="article">
+  <meta property="og:image" content="https://lbaquero33.github.io/sportsforce.png">
+  <meta name="twitter:card" content="summary">
+  <title>Hitter Damage &amp; Swing Efficiency Model | Lucas Baquero</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="project-page-body">
+  <main>
+    <header class="site-header">
+      <a class="nameplate" href="index.html">Lucas Baquero</a>
+      <nav aria-label="Main navigation"><a href="index.html#work">Projects</a><a href="index.html#experience">Experience</a><a href="index.html#about">About</a></nav>
+      <a class="resume-link" href="Lucas_Baquero_Resume.pdf" download>Download résumé</a>
+    </header>
+
+    <section class="case-hero">
+      <div class="case-shell">
+        <a class="case-back" href="index.html#work">← All projects</a>
+        <div class="case-hero-grid">
+          <div><p class="eyebrow">Baseball analytics / hitter evaluation</p><h1>Hitter Damage &amp; Swing Efficiency Model</h1></div>
+          <div><p class="case-deck">An end-to-end system for measuring how efficiently hitters convert swing opportunities into damage.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <dl class="case-meta">
+      <div><dt>Built with</dt><dd>R, Shiny, Python, TrackMan, MLB Statcast</dd></div>
+      <div><dt>Scale</dt><dd>1.25M+ MLB Statcast pitches</dd></div>
+      <div><dt>Calibration</dt><dd>673 completed-season MLB hitter profiles</dd></div>
+    </dl>
+
+    <div class="case-body">
+      <section class="case-section case-lead">
+        <div><p class="eyebrow">The project</p><h2>Damage, with the process attached.</h2></div>
+        <div class="case-copy">
+          <p>The model evaluates how efficiently hitters turn swing opportunities into damage using exit velocity, launch angle, contact quality, swing decisions, pitch characteristics, and situational context.</p>
+          <p>Resumable data pipelines standardize college TrackMan/Savant and MLB Statcast pitch-level data, run quality audits, and produce player-season summaries and reproducible analysis outputs.</p>
+          <p>A transparent exit-velocity × launch-angle Damage Score sits alongside pitch type, velocity, location, count, two-strike, spray, and adjustability metrics.</p>
+        </div>
+      </section>
+
+      <section class="case-section">
+        <div class="case-logo-stage"><img src="sportsforce.png" alt="SportsForce Baseball logo"></div>
+      </section>
+
+      <section class="case-section">
+        <div class="case-section-head"><div><p class="eyebrow">Model design</p><h2 class="case-section-title">Built to be inspectable.</h2></div><p>The project connects large-scale pitch processing, transparent scoring, future-performance checks, and scouting presentation.</p></div>
+        <div class="case-points">
+          <article><span>01</span><h3>Process</h3><p>Build standardized, resumable pitch-level pipelines with quality audits and reproducible outputs.</p></article>
+          <article><span>02</span><h3>Validate</h3><p>Use rolling-origin, year-forward analysis to test the relationship to future performance.</p></article>
+          <article><span>03</span><h3>Scout</h3><p>Generate searchable reports with level-specific percentiles and sample-stabilized MLB 20–80 grades.</p></article>
+        </div>
+      </section>
+    </div>
+
+    <section class="case-next"><a href="dhd.html">Next project <span>DHD Self-Development App →</span></a></section>
+    <footer><p>© 2026 Lucas Baquero</p><div><a href="index.html#work">All projects</a><a href="Lucas_Baquero_Resume.pdf" download>Résumé</a></div><a href="mailto:Lucas.Baquero1@marist.edu">Contact</a></footer>
+  </main>
+</body>
+</html>

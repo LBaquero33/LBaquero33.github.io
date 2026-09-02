@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Butler Pitch Tunnel, Lucas Baquero's TrackMan-based pitch-flight analysis project.">
+  <meta property="og:title" content="Butler Pitch Tunnel | Lucas Baquero">
+  <meta property="og:description" content="Individual TrackMan pitch-pair reconstruction, measured flight playback, release geometry, separation, shape, and spin analysis.">
+  <meta property="og:type" content="article">
+  <meta property="og:image" content="https://lbaquero33.github.io/butler-tunnel-hitter.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <title>Butler Pitch Tunnel | Lucas Baquero</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="project-page-body">
+  <main>
+    <header class="site-header">
+      <a class="nameplate" href="index.html">Lucas Baquero</a>
+      <nav aria-label="Main navigation"><a href="index.html#work">Projects</a><a href="index.html#experience">Experience</a><a href="index.html#about">About</a></nav>
+      <a class="resume-link" href="Lucas_Baquero_Resume.pdf" download>Download résumé</a>
+    </header>
+
+    <section class="case-hero">
+      <div class="case-shell">
+        <a class="case-back" href="index.html#work">← All projects</a>
+        <div class="case-hero-grid">
+          <div><p class="eyebrow">Pitch-flight analysis / player development</p><h1>Butler Pitch Tunnel</h1></div>
+          <div>
+            <p class="case-deck">A coach-facing way to compare two real pitches from release through the hitter’s decision and into the plate.</p>
+            <div class="case-actions"><a class="case-button primary" href="https://ltbaquero.shinyapps.io/DHDApp/" target="_blank" rel="noreferrer">Open live analysis ↗</a></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <dl class="case-meta">
+      <div><dt>Built with</dt><dd>R, Shiny, Plotly, TrackMan</dd></div>
+      <div><dt>Dataset</dt><dd>6,573 Butler pitches from 17 pitchers</dd></div>
+      <div><dt>Focus</dt><dd>Individual pitch pairs and measured flight</dd></div>
+    </dl>
+
+    <div class="case-body case-dark-stage">
+      <section class="case-section">
+        <figure class="case-media"><img src="butler-tunnel-flight.gif" alt="Animated hitter-view comparison of a Butler slider and fastball"><figcaption>Slider × fastball · hitter view · 0.25× playback</figcaption></figure>
+      </section>
+
+      <section class="case-section case-lead">
+        <div><p class="project-type">The question</p><h2 style="color:white">Do they look alike long enough?</h2></div>
+        <div class="case-copy">
+          <p style="color:white">The selected slider and fastball start from nearly the same release, remain close around the hitter’s decision, and finish roughly 16 inches apart.</p>
+          <p>Rather than grading an arsenal in the abstract, the tool reconstructs actual individual TrackMan trajectories and lets the coach inspect the exact pair.</p>
+          <p>Measured flight timing, release geometry, separation, pitch shape, spin, game changes, and coach notes provide context for the visual result.</p>
+        </div>
+      </section>
+
+      <section class="case-section">
+        <div class="case-section-head"><div><p class="project-type">Three angles</p><h2 class="case-section-title" style="color:white">The same pair, viewed from the field.</h2></div><p>Hitter, pitcher, and side views make the early visual match and late break easier to explain.</p></div>
+        <div class="case-visual-grid">
+          <figure><img src="butler-tunnel-hitter.jpg" alt="Hitter view of Butler slider and fastball trajectories"><figcaption>Hitter view</figcaption></figure>
+          <figure><img src="butler-tunnel-pitcher.jpg" alt="Pitcher view of Butler slider and fastball trajectories"><figcaption>Pitcher view</figcaption></figure>
+          <figure class="case-wide"><img src="butler-tunnel-side.jpg" alt="Side view of Butler slider and fastball trajectories"><figcaption>Side view</figcaption></figure>
+        </div>
+      </section>
+
+      <section class="case-section">
+        <div class="case-section-head"><div><p class="project-type">Supporting evidence</p><h2 class="case-section-title" style="color:white">Why the pair works.</h2></div><p>Release, separation, shape, and spin views explain the flight instead of asking the animation to stand alone.</p></div>
+        <div class="case-visual-grid">
+          <figure><img src="butler-release-check.jpg" alt="Release check for the Butler slider and fastball"><figcaption>Release check</figcaption></figure>
+          <figure><img src="butler-separation.jpg" alt="Tunnel separation curve for the Butler slider and fastball"><figcaption>Separation through flight</figcaption></figure>
+          <figure class="case-wide"><img src="butler-pitch-shape.jpg" alt="Modeled pitch-shape development"><figcaption>Pitch-shape development</figcaption></figure>
+          <figure class="case-wide"><img src="butler-spin-movement.jpg" alt="Butler spin and movement clusters"><figcaption>Spin and movement context</figcaption></figure>
+        </div>
+      </section>
+    </div>
+
+    <section class="case-next"><a href="ball-fox.html">Next project <span>Ball Fox →</span></a></section>
+    <footer><p>© 2026 Lucas Baquero</p><div><a href="index.html#work">All projects</a><a href="Lucas_Baquero_Resume.pdf" download>Résumé</a></div><a href="mailto:Lucas.Baquero1@marist.edu">Contact</a></footer>
+  </main>
+</body>
+</html>
