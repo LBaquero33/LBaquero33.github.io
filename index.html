@@ -3,14 +3,14 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Lucas Baquero's baseball player development, programming, analytics, and scouting portfolio.">
-  <meta property="og:title" content="Lucas Baquero | Baseball Technology Portfolio">
-  <meta property="og:description" content="Baseball player development, programming, analytics, and scouting projects.">
+  <meta name="description" content="Lucas Baquero's baseball player development, operations, programming, and scouting portfolio.">
+  <meta property="og:title" content="Lucas Baquero | Baseball Player Dev/Operations Portfolio">
+  <meta property="og:description" content="Player development tools, scouting reports, and baseball business operations applications.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://lbaquero33.github.io/">
   <meta property="og:image" content="https://lbaquero33.github.io/og-editorial.png">
   <meta name="twitter:card" content="summary_large_image">
-  <title>Lucas Baquero | Baseball Technology Portfolio</title>
+  <title>Lucas Baquero | Baseball Player Dev/Operations Portfolio</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -27,9 +27,9 @@
 
     <section class="hero" aria-labelledby="hero-title">
       <div class="hero-copy">
-        <p class="eyebrow">Baseball technology portfolio</p>
+        <p class="eyebrow">Baseball Player Dev/Operations Portfolio</p>
         <h1 id="hero-title">Baseball player development, programming, and scouting.</h1>
-        <p class="hero-lede">I’m Lucas Baquero. I build baseball analytics tools, scouting reports, and player-development applications in R, Python, Swift, and Shiny.</p>
+        <p class="hero-lede">Player development tools, scouting reports, and business operations applications in R, Python, Swift, and Shiny.</p>
         <div class="hero-links">
           <a href="#work">View selected work ↗</a>
           <a href="mailto:Lucas.Baquero1@marist.edu">Lucas.Baquero1@marist.edu</a>
@@ -49,8 +49,8 @@
     <section class="work-section" id="work">
       <div class="section-intro">
         <p class="eyebrow">Selected work</p>
-        <h2>Tools made for actual baseball decisions.</h2>
-        <p>Products and reports for player development, scouting, pitch planning, and coach communication.</p>
+        <h2>Guided Development and Game Decision Making</h2>
+        <p>Work that helps coaches evaluate players, plan development, and make decisions during games.</p>
       </div>
 
       <article class="feature-project">
@@ -60,8 +60,8 @@
         <div class="feature-copy">
           <p class="project-type">Computer vision / pitch review</p>
           <h3><a href="commandiq.html">CommandIQ</a></h3>
-          <p>Bullpen command workflow for TrackMan and Rapsodo-style CSVs, intended-target entry, and multi-pitch review.</p>
-          <p>Supports video-assisted suggestions with user confirmation, session history, cloud persistence, and report export.</p>
+          <p>CommandIQ uses the catcher’s glove flash as the intended target, then compares it with where the pitch actually crossed the plate.</p>
+          <p>Video and TrackMan or Rapsodo-style data stay together for pitch-by-pitch bullpen review, saved sessions, and report export.</p>
           <dl>
             <div><dt>Built with</dt><dd>Swift, Python, Supabase</dd></div>
             <div><dt>Focus</dt><dd>Computer vision and command review</dd></div>
@@ -162,6 +162,68 @@
         </div>
       </article>
 
+      <article class="report-project selfscout-project" aria-labelledby="selfscout-title">
+        <div class="project-heading">
+          <div>
+            <p class="project-type">Scouting and roster management</p>
+            <h3 id="selfscout-title">SelfScout</h3>
+          </div>
+          <div class="project-summary">
+            <p>SelfScout keeps player profiles, hitter and pitcher reports, boards, and roster planning in one place.</p>
+            <p>Scouts can write reports with 20–80 grades, then use those evaluations while building boards and rosters.</p>
+            <div class="project-links">
+              <a href="selfscout.html">View project page ↗</a>
+            </div>
+          </div>
+        </div>
+        <div class="app-screen-grid">
+          <figure>
+            <img src="selfscout-dashboard.png" alt="SelfScout mobile scouting dashboard" loading="lazy">
+            <figcaption>Scouting dashboard</figcaption>
+          </figure>
+          <figure>
+            <img src="selfscout-players.png" alt="SelfScout mobile player profiles" loading="lazy">
+            <figcaption>Player profiles</figcaption>
+          </figure>
+          <figure>
+            <img src="selfscout-board.png" alt="SelfScout mobile scouting board" loading="lazy">
+            <figcaption>Staff board</figcaption>
+          </figure>
+        </div>
+      </article>
+
+      <article class="homeplate-project" aria-labelledby="homeplate-title">
+        <header class="homeplate-heading">
+          <div>
+            <p class="project-type">Player development / business operations</p>
+            <h3 id="homeplate-title">Home Plate</h3>
+          </div>
+          <div class="homeplate-intro">
+            <p>Home Plate is a baseball operations platform for teams, facilities, academies, and independent trainers.</p>
+            <p>It connects player development with schedules, bookings, payments, communication, websites, and business analytics.</p>
+            <p>Coaches can assign work and review progress remotely. R-based TrackMan, Rapsodo, and HitTrax analysis is available inside the mobile app.</p>
+            <div class="project-links">
+              <a href="home-plate.html">View project page ↗</a>
+              <a href="https://www.homeplateapps.com/" target="_blank" rel="noreferrer">Visit Home Plate ↗</a>
+            </div>
+          </div>
+        </header>
+        <div class="homeplate-gallery">
+          <figure class="homeplate-gallery-main">
+            <img src="homeplate-market.png" alt="Home Plate website describing the market for baseball organizations" loading="lazy">
+            <figcaption>For teams, facilities, academies, and trainers</figcaption>
+          </figure>
+          <figure>
+            <img src="homeplate-operations.png" alt="Home Plate business operations dashboard" loading="lazy">
+            <figcaption>Bookings, schedules, utilization, and revenue</figcaption>
+          </figure>
+          <figure>
+            <img src="homeplate-development-data.png" alt="Home Plate player development trends and baseball data" loading="lazy">
+            <figcaption>Development data delivered to coaches and players</figcaption>
+          </figure>
+        </div>
+      </article>
+
       <div class="project-list">
         <article class="listed-project image-project">
           <div class="project-image-small">
@@ -189,32 +251,6 @@
           </div>
         </article>
 
-        <article class="listed-project compact-project">
-          <div class="project-logo">
-            <img src="dhd.png" alt="Diamond Hitting Development" width="72" height="72" loading="lazy">
-          </div>
-          <div>
-            <p class="project-type">Player development</p>
-            <h3>DHD Self-Development App</h3>
-            <p>Tracks strength and conditioning and hitting development using role-based coach and player workflows, daily logs, calendars, and progress data.</p>
-            <div class="project-links">
-              <a href="dhd.html">View project page ↗</a>
-              <a href="https://apps.apple.com/us/app/diamond-hitting/id6786881967" target="_blank" rel="noreferrer">View on the App Store ↗</a>
-            </div>
-          </div>
-        </article>
-
-        <article class="listed-project compact-project text-only">
-          <div>
-            <p class="project-type">Scouting and roster management</p>
-            <h3>SelfScout</h3>
-            <p>Player profiles, hitter and pitcher reports, evaluations, boards, roster planning, and configurable 20–80 reporting.</p>
-            <div class="project-links">
-              <a href="selfscout.html">View project page ↗</a>
-              <a href="https://apps.apple.com/us/app/selfscoutmobile/id6786910260" target="_blank" rel="noreferrer">View on the App Store ↗</a>
-            </div>
-          </div>
-        </article>
       </div>
     </section>
 

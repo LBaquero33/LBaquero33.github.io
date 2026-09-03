@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="CommandIQ, Lucas Baquero's computer-vision and bullpen command review project.">
   <meta property="og:title" content="CommandIQ | Lucas Baquero">
-  <meta property="og:description" content="A bullpen command workflow built around intended targets, pitch data, video review, and report export.">
+  <meta property="og:description" content="A bullpen command workflow that reads the catcher's glove flash as the intended target and compares it with the pitch result.">
   <meta property="og:type" content="article">
   <meta property="og:image" content="https://lbaquero33.github.io/commandiq.jpeg">
   <meta name="twitter:card" content="summary_large_image">
@@ -25,7 +25,7 @@
         <a class="case-back" href="index.html#work">← All projects</a>
         <div class="case-hero-grid">
           <div><p class="eyebrow">Computer vision / pitch review</p><h1 class="case-title-compact">CommandIQ</h1></div>
-          <div><p class="case-deck">A bullpen command workflow that connects intended target, pitch data, and video-assisted review.</p></div>
+          <div><p class="case-deck">A bullpen command workflow that uses the catcher’s glove flash as the intended target and compares it with the pitch result.</p></div>
         </div>
       </div>
     </section>
@@ -38,11 +38,11 @@
 
     <div class="case-body">
       <section class="case-section case-lead">
-        <div><p class="eyebrow">The project</p><h2>Command needs context.</h2></div>
+        <div><p class="eyebrow">The project</p><h2>The glove flash sets the target.</h2></div>
         <div class="case-copy">
-          <p>CommandIQ is built to review where a pitcher intended to throw and what actually happened on each pitch.</p>
-          <p>The workflow supports intended-target entry, multi-pitch review, and video-assisted suggestions that remain subject to user confirmation.</p>
-          <p>Session history, cloud persistence, and report export carry the review beyond a single bullpen.</p>
+          <p>CommandIQ looks for the catcher’s glove flash before the pitch and treats that spot as the intended target.</p>
+          <p>It then compares the target with where the pitch crossed the plate, pairing video with TrackMan or Rapsodo-style data.</p>
+          <p>Coaches confirm the target, review pitches one by one, save sessions, and export the results.</p>
         </div>
       </section>
 
@@ -53,8 +53,8 @@
       <section class="case-section">
         <div class="case-section-head"><div><p class="eyebrow">Workflow</p><h2 class="case-section-title">Built around the review process.</h2></div><p>The product keeps pitch data, intended location, video evidence, and saved results in one continuous workflow.</p></div>
         <div class="case-points">
-          <article><span>01</span><h3>Set the target</h3><p>Record intended location so command is evaluated against the plan for the pitch.</p></article>
-          <article><span>02</span><h3>Review the pitch</h3><p>Combine pitch-level data with computer-vision assistance and user confirmation.</p></article>
+          <article><span>01</span><h3>Find the glove</h3><p>Use the catcher’s pre-pitch glove flash to mark the intended target.</p></article>
+          <article><span>02</span><h3>Compare the result</h3><p>See the target and actual pitch location together, with the coach confirming the read.</p></article>
           <article><span>03</span><h3>Keep the record</h3><p>Store sessions, revisit pitch history, and export a report for continued development work.</p></article>
         </div>
       </section>
