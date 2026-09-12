@@ -5,9 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="MLB Attack Pitch Sequencer, Lucas Baquero's count-by-count pitch-planning project.">
   <meta property="og:title" content="MLB Attack Pitch Sequencer | Lucas Baquero">
-  <meta property="og:description" content="Count-by-count primary and backup pitch-location planning from hitter tendencies and pitcher context.">
+  <meta property="og:description" content="A count-by-count primary and backup pitch-location planning sheet.">
   <meta property="og:type" content="article">
-  <meta property="og:image" content="https://lbaquero33.github.io/pitch-sequencer.jpg">
+  <meta property="og:image" content="https://lbaquero33.github.io/pitch-sequencer-excerpt.jpg">
   <meta name="twitter:card" content="summary_large_image">
   <title>MLB Attack Pitch Sequencer | Lucas Baquero</title>
   <link rel="stylesheet" href="styles.css">
@@ -25,41 +25,47 @@
         <a class="case-back" href="index.html#work">← All projects</a>
         <div class="case-hero-grid">
           <div><p class="eyebrow">Pitch planning / scouting</p><h1>MLB Attack Pitch Sequencer</h1></div>
-          <div><p class="case-deck">A count-by-count attack plan that gives the pitcher a primary call and a backup option for every situation.</p></div>
+          <p class="case-deck">A count-by-count attack plan with a primary call and a backup pitch-location option.</p>
         </div>
       </div>
     </section>
 
-    <dl class="case-meta">
-      <div><dt>Built with</dt><dd>R, Shiny</dd></div>
-      <div><dt>Output</dt><dd>Count-by-count pitch and location calls</dd></div>
-      <div><dt>Focus</dt><dd>Pitch planning and hitter tendencies</dd></div>
+    <dl class="case-facts">
+      <div><dt>Built with</dt><dd>R and Shiny</dd></div>
+      <div><dt>Inputs</dt><dd>Hitter tendencies and selected pitcher context</dd></div>
+      <div><dt>Output</dt><dd>Primary and backup calls for the count matrix</dd></div>
     </dl>
 
     <div class="case-body">
-      <section class="case-section case-lead">
-        <div><p class="eyebrow">The project</p><h2>A plan for every count.</h2></div>
+      <section class="case-intro">
+        <div><p class="eyebrow">Game planning</p><h2>What is the plan if the count changes?</h2></div>
         <div class="case-copy">
-          <p>The Pitch Sequencer generates count-by-count primary and backup pitch-location options from hitter tendencies and selected pitcher context.</p>
-          <p>The layout is designed to be read as an attack plan: find the count, see the first option, and keep a second call ready.</p>
-          <p>This is the pitch-sequencing portion of the broader MLB Attack project.</p>
+          <p>The sequencer organizes a matchup plan so the pitcher or coach can find the count, read the first option, and keep a second call ready.</p>
+          <p>The recommendations are built from hitter tendencies and the selected pitcher’s context. The sheet separates first and second times through the order when the available plan calls for it.</p>
+          <p>This is a planning aid, not an automated in-game decision. A coach or scout still reviews pitch fit, health, command that day, and the game situation.</p>
         </div>
       </section>
 
-      <section class="case-section">
-        <figure class="case-media contain"><img src="pitch-sequencer.jpg" alt="MLB Attack pitch sequencer for Aaron Nola against Gleyber Torres"><figcaption>Pitch sequencer · primary and backup calls by count</figcaption></figure>
+      <section class="content-section">
+        <p class="eyebrow">Report excerpt</p>
+        <h2>The pitch sequencer</h2>
+        <p class="section-copy">The excerpt keeps the matchup heading and opening count rows readable. Open the full report to inspect the complete count matrix.</p>
+        <figure class="evidence-figure contain"><a href="pitch-sequencer.jpg" target="_blank"><img src="pitch-sequencer-excerpt.jpg" alt="Excerpt of the MLB Attack pitch sequencer for Aaron Nola against Gleyber Torres"></a><figcaption>Example matchup · click to open the full count-by-count sheet</figcaption></figure>
       </section>
 
-      <section class="case-section">
-        <div class="case-points">
-          <article><span>01</span><h3>Read the hitter</h3><p>Use hitter tendencies to frame the locations and pitch types most relevant to the matchup.</p></article>
-          <article><span>02</span><h3>Fit the pitcher</h3><p>Keep the plan connected to the selected pitcher rather than using one generic attack pattern.</p></article>
-          <article><span>03</span><h3>Sequence the count</h3><p>Present a primary and backup option for the full count matrix in a single scouting view.</p></article>
-        </div>
+      <section class="content-section">
+        <p class="eyebrow">How to read it</p>
+        <h2>Inputs and limits stay visible</h2>
+        <ul class="detail-list">
+          <li><strong>Hitter tendency</strong><span>Frames the pitch types and locations relevant to the matchup.</span></li>
+          <li><strong>Pitcher context</strong><span>Keeps the plan tied to the selected pitcher rather than a generic attack pattern.</span></li>
+          <li><strong>Primary and backup</strong><span>Gives the coach an alternate call without leaving the count matrix.</span></li>
+          <li><strong>Limitation</strong><span>The report does not know game-day feel, fatigue, injury, or unexpected command changes.</span></li>
+        </ul>
       </section>
     </div>
 
-    <section class="case-next"><a href="hitter-damage.html">Next project <span>Hitter Damage Model →</span></a></section>
+    <section class="case-next"><a href="selfscout.html">Next project <span>SelfScout →</span></a></section>
     <footer><p>© 2026 Lucas Baquero</p><div><a href="index.html#work">All projects</a><a href="Lucas_Baquero_Resume.pdf" download>Résumé</a></div><a href="mailto:Lucas.Baquero1@marist.edu">Contact</a></footer>
   </main>
 </body>

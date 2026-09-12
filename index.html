@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Lucas Baquero's baseball player development, operations, programming, and scouting portfolio.">
+  <meta name="description" content="Lucas Baquero's baseball player-development, analysis, scouting, and operations portfolio.">
   <meta property="og:title" content="Lucas Baquero | Baseball Player Dev/Operations Portfolio">
   <meta property="og:description" content="Player development tools, scouting reports, and baseball business operations applications.">
   <meta property="og:type" content="website">
@@ -31,18 +31,13 @@
         <h1 id="hero-title">player development, analysis, and scouting.</h1>
         <p class="hero-lede">Player development tools, scouting reports, and business operations applications in R, Python, Swift, and Shiny.</p>
         <div class="hero-links">
-          <a href="#work">View selected work ↗</a>
-          <a href="mailto:Lucas.Baquero1@marist.edu">Lucas.Baquero1@marist.edu</a>
+          <a class="text-link" href="#work">View selected work ↗</a>
+          <a class="text-link quiet-link" href="mailto:Lucas.Baquero1@marist.edu">Lucas.Baquero1@marist.edu</a>
         </div>
       </div>
       <figure class="portrait">
-        <div class="portrait-frame">
-          <img src="lucas-headshot.png" alt="Lucas Baquero">
-        </div>
-        <figcaption>
-          <span>Marist University</span>
-          <span>Poughkeepsie, New York</span>
-        </figcaption>
+        <div class="portrait-frame"><img src="lucas-headshot.png" alt="Lucas Baquero"></div>
+        <figcaption><span>Marist University</span><span>Poughkeepsie, New York</span></figcaption>
       </figure>
     </section>
 
@@ -50,243 +45,135 @@
       <div class="section-intro">
         <p class="eyebrow">Selected work</p>
         <h2>Guided Development and Game Decision Making</h2>
-        <p>Work that helps coaches evaluate players, plan development, and make decisions during games.</p>
+        <p>Tools for reviewing execution, explaining player performance, planning matchups, and keeping development work organized.</p>
       </div>
 
-      <article class="feature-project">
-        <div class="feature-image">
-          <img src="commandiq.jpeg" alt="CommandIQ computer-vision target overlay on game video">
-        </div>
-        <div class="feature-copy">
-          <p class="project-type">Computer vision / pitch review</p>
-          <h3><a href="commandiq.html">CommandIQ</a></h3>
-          <p>CommandIQ uses the catcher’s glove flash as the intended target, then compares it with where the pitch actually crossed the plate.</p>
-          <p>Video and TrackMan or Rapsodo-style data stay together for pitch-by-pitch bullpen review, saved sessions, and report export.</p>
-          <dl>
-            <div><dt>Built with</dt><dd>Swift, Python, Supabase</dd></div>
-            <div><dt>Focus</dt><dd>Computer vision and command review</dd></div>
-          </dl>
-          <a href="commandiq.html">View project page ↗</a>
-        </div>
-      </article>
-
-      <article class="butler-project" aria-labelledby="butler-title">
-        <header class="butler-heading">
-          <div>
-            <p class="project-type">Pitch-flight analysis / player development</p>
-            <h3 id="butler-title">Butler Pitch Tunnel</h3>
-          </div>
-          <div class="butler-intro">
-            <p>Reconstructs individual TrackMan trajectories to find pitch pairs that hold the same visual lane early and separate after the hitter must decide.</p>
-            <p>This Butler slider–fastball pair starts from nearly the same release and finishes 18.3 inches apart.</p>
-            <div class="project-links project-links-dark">
-              <a href="butler-pitch-tunnel.html">View project page ↗</a>
-              <a href="https://ltbaquero.shinyapps.io/DHDApp/" target="_blank" rel="noreferrer">Open the live analysis ↗</a>
-            </div>
-          </div>
-        </header>
-
-        <figure class="butler-flight">
-          <img src="butler-tunnel-behind-zone.gif" alt="Animated catcher-side view of a Butler slider and fastball separating late behind a visible strike zone">
-          <figcaption>
-            <span>Same release. Similar early flight. Late separation.</span>
-            <span>Behind the strike zone · 18.3 inches apart at the plate · 0.25× playback</span>
-          </figcaption>
+      <article class="featured-project featured-dark">
+        <figure class="featured-media">
+          <img src="commandiq.jpeg" alt="CommandIQ review frame with a coach-selected intended target marked over game video">
+          <figcaption>Coach-reviewed target annotation. Suggestions are never applied without confirmation.</figcaption>
         </figure>
-
-        <div class="butler-angle-grid" aria-label="Pitch tunnel flight stages from behind the strike zone">
-          <figure>
-            <img src="butler-tunnel-behind-zone-release.jpg" alt="Butler slider and fastball sharing the same release lane from behind the strike zone" loading="lazy">
-            <figcaption><strong>Out of the hand</strong><span>Nearly the same release lane</span></figcaption>
-          </figure>
-          <figure>
-            <img src="butler-tunnel-behind-zone-decision.jpg" alt="Butler slider and fastball remaining close before separating from behind the strike zone" loading="lazy">
-            <figcaption><strong>Decision window</strong><span>The pitches stay close before the break</span></figcaption>
-          </figure>
-          <figure>
-            <img src="butler-tunnel-behind-zone-plate.jpg" alt="Butler slider and fastball separated at the plate with the strike zone visible" loading="lazy">
-            <figcaption><strong>At the plate</strong><span>18.3 inches of finish separation</span></figcaption>
-          </figure>
-        </div>
-
-        <div class="butler-evidence">
-          <div class="butler-evidence-heading">
-            <p class="project-type">Supporting analysis</p>
-            <p>Release geometry, the separation curve, pitch shape, and spin context explain why the pair works—not just what the animation looks like.</p>
-          </div>
-          <div class="butler-graph-grid">
-            <figure>
-              <img src="butler-release-check.jpg" alt="Butler release-point comparison for a slider and fastball" loading="lazy">
-              <figcaption>Release check</figcaption>
-            </figure>
-            <figure>
-              <img src="butler-separation.jpg" alt="Butler slider and fastball tunnel separation curve" loading="lazy">
-              <figcaption>Separation through flight</figcaption>
-            </figure>
-            <figure class="wide-graph">
-              <img src="butler-pitch-shape.jpg" alt="Modeled pitch-shape change from release to home plate" loading="lazy">
-              <figcaption>How pitch shape develops on the way in</figcaption>
-            </figure>
-            <figure class="wide-graph">
-              <img src="butler-spin-movement.jpg" alt="Butler pitch spin and movement clusters by pitch type" loading="lazy">
-              <figcaption>Spin and movement context across the arsenal</figcaption>
-            </figure>
-          </div>
+        <div class="featured-copy">
+          <p class="project-type">Computer vision / command review</p>
+          <h3>CommandIQ</h3>
+          <p>The catcher’s pre-pitch glove position can be marked as the intended target. CommandIQ pairs that coach-reviewed target with the pitch’s actual TrackMan or Rapsodo location.</p>
+          <p>Video assistance can propose a target in supported workflows, but the coach reviews or replaces it before anything is applied.</p>
+          <p class="project-status"><strong>Status:</strong> working, user-confirmed review workflow with a manual fallback.</p>
+          <a class="text-link light-link" href="commandiq.html">See the workflow ↗</a>
         </div>
       </article>
 
-      <article class="report-project">
-        <div class="project-heading">
-          <div>
+      <article class="featured-project model-feature">
+        <div class="featured-copy">
+          <div class="project-heading-line">
+            <img src="sportsforce.png" alt="SportsForce Baseball" width="48" height="48">
+            <p class="project-type">Baseball analytics / SportsForce project context</p>
+          </div>
+          <h3>Hitter Damage &amp; Swing Efficiency</h3>
+          <p>I built the scoring, data-processing, validation, and reporting system behind a hitter-development model that separates contact value from swing decisions.</p>
+          <p>The MLB pipeline contains about 1.25 million raw pitches. A separate college validation set uses rolling-origin holdouts so every test season is predicted only from earlier seasons.</p>
+          <p class="project-status"><strong>Finding:</strong> next-season Damage per Contact was the only target to clear the project’s 2% holdout-improvement threshold; the other projection targets remain provisional or marginal.</p>
+          <a class="text-link" href="hitter-damage.html">Review the scoring and validation ↗</a>
+        </div>
+        <div class="model-evidence">
+          <figure>
+            <img src="hitter-damage-surface.png" alt="Damage Score surface combining exit velocity and launch angle">
+            <figcaption>Damage Score: exit velocity × launch angle</figcaption>
+          </figure>
+          <figure>
+            <img src="hitter-future-validation.png" alt="Rolling-origin holdout validation results for five next-season hitter targets">
+            <figcaption>Target-specific year-forward validation</figcaption>
+          </figure>
+        </div>
+      </article>
+
+      <article class="project-card project-card-wide butler-card">
+        <div class="card-copy">
+          <p class="project-type">Pitch-flight analysis</p>
+          <h3>Butler Pitch Tunnel</h3>
+          <p>TrackMan trajectories reconstruct a Butler fastball–slider pair from behind the strike zone. The selected pitches start from a similar release lane and finish 18.3 inches apart at the plate.</p>
+          <p class="project-status">That measurement describes this pair’s modeled flight; it does not by itself prove deception or hitter effectiveness.</p>
+          <div class="project-links">
+            <a class="text-link" href="butler-pitch-tunnel.html">View the full analysis ↗</a>
+            <a class="text-link quiet-link" href="https://ltbaquero.shinyapps.io/DHDApp/" target="_blank" rel="noreferrer">Open Shiny app ↗</a>
+          </div>
+        </div>
+        <figure class="motion-figure">
+          <img id="butler-home-motion" src="butler-tunnel-behind-zone.gif" data-animated-source="butler-tunnel-behind-zone.gif" data-still-source="butler-tunnel-behind-zone-release.jpg" alt="Modeled Butler fastball and slider trajectories viewed from behind a visible strike zone">
+          <figcaption><span>Fastball–slider pair · modeled from behind the zone</span><button type="button" data-motion-toggle="butler-home-motion" aria-pressed="true">Pause animation</button></figcaption>
+        </figure>
+      </article>
+
+      <div class="project-grid">
+        <article class="project-card">
+          <div class="card-copy">
             <p class="project-type">College player development</p>
-            <h3>Base Player Development Dashboard: College Baseball</h3>
+            <h3>Base Player Development Dashboard</h3>
+            <p>The Ball Fox R Shiny app turns TrackMan-exportable data into hitter and pitcher reports, tracks goals, and adds count, usage, command, and two-strike context to results.</p>
+            <a class="text-link" href="ball-fox.html">View reports ↗</a>
           </div>
-          <div class="project-summary">
-            <p>Tracks hitting and pitching progress over time using TrackMan-exportable data.</p>
-            <p>Generates context-driven reports for players and coaches and connects results to individual goals.</p>
-            <div class="project-links">
-              <a href="ball-fox.html">View project page ↗</a>
-              <a href="https://ltbaquero.shinyapps.io/Marist_App/" target="_blank" rel="noreferrer">Open the app ↗</a>
-            </div>
-          </div>
-        </div>
-        <div class="report-images">
-          <figure>
-            <img src="ballfox-hitter.jpg" alt="Two-strike hitter dashboard from the Ball Fox app" loading="lazy">
-            <figcaption>Hitter report — two-strike dashboard</figcaption>
+          <figure class="card-media report-preview">
+            <img src="ballfox-hitter.jpg" alt="Ball Fox two-strike hitter report">
+            <figcaption>Two-strike hitter report</figcaption>
           </figure>
-          <figure>
-            <img src="ballfox-pitcher.jpg" alt="Pitcher summary report from the Ball Fox app" loading="lazy">
-            <figcaption>Pitcher report — usage, results, and command</figcaption>
-          </figure>
-        </div>
-      </article>
+        </article>
 
-      <article class="report-project selfscout-project" aria-labelledby="selfscout-title">
-        <div class="project-heading">
-          <div>
-            <p class="project-type">Scouting and roster management</p>
-            <h3 id="selfscout-title">SelfScout</h3>
-          </div>
-          <div class="project-summary">
-            <p>SelfScout keeps player profiles, hitter and pitcher reports, boards, and roster planning in one place.</p>
-            <p>Scouts can write reports with 20–80 grades, then use those evaluations while building boards and rosters.</p>
-            <div class="project-links">
-              <a href="selfscout.html">View project page ↗</a>
-            </div>
-          </div>
-        </div>
-      </article>
-
-      <article class="homeplate-project" aria-labelledby="homeplate-title">
-        <header class="homeplate-heading">
-          <div>
+        <article class="project-card homeplate-card">
+          <div class="card-copy">
             <p class="project-type">Player development / business operations</p>
-            <h3 id="homeplate-title">Home Plate</h3>
+            <h3>Home Plate</h3>
+            <p>A baseball operating system connecting services, scheduling, payments, programs, player results, and analytics around the same organization and athlete records.</p>
+            <p class="project-status">The images below are from a native iOS QA build using demonstration data.</p>
+            <a class="text-link" href="home-plate.html">View the product work ↗</a>
           </div>
-          <div class="homeplate-intro">
-            <p>Home Plate is a baseball operations platform for teams, facilities, academies, and independent trainers.</p>
-            <p>It connects player development with schedules, bookings, payments, communication, websites, and business analytics.</p>
-            <p>Coaches can assign work and review progress remotely. R-based TrackMan, Rapsodo, and HitTrax analysis is available inside the mobile app.</p>
-            <div class="project-links">
-              <a href="home-plate.html">View project page ↗</a>
-              <a href="https://www.homeplateapps.com/" target="_blank" rel="noreferrer">Visit Home Plate ↗</a>
-            </div>
+          <div class="phone-strip" aria-label="Home Plate native iOS screens">
+            <img src="homeplate-service-editor.jpg" alt="Home Plate iPhone service editor using demonstration data">
+            <img src="homeplate-day-results.jpg" alt="Home Plate iPhone player day results using demonstration data">
+            <img src="homeplate-r-analysis.jpg" alt="Home Plate iPhone R Analysis handoff using demonstration data">
           </div>
-        </header>
-        <div class="homeplate-gallery">
-          <figure class="homeplate-gallery-main">
-            <img src="homeplate-app-dashboard.png" alt="Home Plate organization dashboard showing active teams, members, and upcoming games" loading="lazy">
-            <figcaption>Organization dashboard for teams, athletes, and upcoming work</figcaption>
-          </figure>
-          <figure>
-            <img src="homeplate-app-calendar.png" alt="Home Plate organization calendar showing practices, sessions, and games" loading="lazy">
-            <figcaption>Scheduling across teams, lessons, facilities, and games</figcaption>
-          </figure>
-          <figure>
-            <img src="homeplate-app-player-development.png" alt="Home Plate player development workspace with programs, results, and activity" loading="lazy">
-            <figcaption>Remote programs, results, and player activity</figcaption>
-          </figure>
-        </div>
-      </article>
+        </article>
 
-      <div class="project-list">
-        <article class="listed-project image-project">
-          <div class="project-image-small">
-            <img src="pitch-sequencer.jpg" alt="MLB Attack count-by-count pitch sequencer" loading="lazy">
-          </div>
-          <div>
+        <article class="project-card">
+          <div class="card-copy">
             <p class="project-type">Pitch planning</p>
             <h3>MLB Attack — Pitch Sequencer</h3>
-            <p>Generates count-by-count primary and backup pitch-location options from hitter tendencies and selected pitcher context.</p>
-            <p class="stack">R, Shiny, pitch planning</p>
-            <a href="mlb-attack.html">View project page ↗</a>
+            <p>A count-by-count planning sheet with a primary pitch-location call and a backup option based on hitter tendencies and the selected pitcher’s context.</p>
+            <a class="text-link" href="mlb-attack.html">Read the attack plan ↗</a>
           </div>
+          <figure class="card-media report-preview">
+            <img src="pitch-sequencer-excerpt.jpg" alt="Readable excerpt of an MLB Attack count-by-count pitch sequencer">
+            <figcaption>Excerpt from the count matrix</figcaption>
+          </figure>
         </article>
 
-        <article class="listed-project model-project">
-          <div class="project-logo">
-            <img src="sportsforce.png" alt="SportsForce Baseball" width="72" height="72" loading="lazy">
-          </div>
-          <div>
-            <p class="project-type">Baseball analytics</p>
-            <h3>Hitter Damage &amp; Swing Efficiency Model</h3>
-            <p>Processed 1.25M+ MLB Statcast pitches, modeled hitter damage and swing efficiency, performed year-forward validation, and generated interactive scouting reports with MLB-calibrated percentiles and 20–80 grades.</p>
-            <p class="stack">R, Shiny, Python, TrackMan, MLB Statcast</p>
-            <a href="hitter-damage.html">View project page ↗</a>
+        <article class="project-card text-card">
+          <div class="card-copy">
+            <p class="project-type">Scouting / roster management</p>
+            <h3>SelfScout</h3>
+            <p>A mobile workspace for player profiles, hitter and pitcher reports, configurable 20–80 grades, staff boards, and roster planning.</p>
+            <p class="project-status">The project page describes the workflow without showing private scouting records.</p>
+            <a class="text-link" href="selfscout.html">View project notes ↗</a>
           </div>
         </article>
-
       </div>
     </section>
 
     <section class="experience-section" id="experience">
-      <div class="section-intro section-intro-light">
-        <p class="eyebrow">Experience</p>
-        <h2>Sports communication, baseball judgment, and software.</h2>
-      </div>
+      <div class="section-heading"><p class="eyebrow">Background</p><h2>Experience</h2></div>
       <div class="experience-list">
-        <article>
-          <div class="experience-when"><p>April 2026 - Current</p><span>Remote</span></div>
-          <div class="experience-role"><h3>Baseball Data &amp; Development Intern</h3><p>Diamond Hitting Development</p></div>
-          <p class="experience-detail">Leads the creation of internal data systems and external user interfaces for DHD clients.</p>
-        </article>
-        <article>
-          <div class="experience-when"><p>Summer 2026</p><span>Remote</span></div>
-          <div class="experience-role"><h3>Scouting Intern</h3><p>SportsForce Baseball</p></div>
-          <p class="experience-detail">Video- and metric-based evaluation of uncommitted hitters and pitchers, recruiting support, and ad hoc data projects in R and Python.</p>
-        </article>
-        <article>
-          <div class="experience-when"><p>August 2024 - December 2025</p><span>Poughkeepsie, NY</span></div>
-          <div class="experience-role"><h3>Offensive Line Student Assistant</h3><p>Marist Football (D1, FCS)</p></div>
-          <p class="experience-detail">Play signaling, recruiting and player-personnel tasks, on-field coaching, and football operations.</p>
-        </article>
-        <article>
-          <div class="experience-when"><p>August 2025 - Present</p><span>Poughkeepsie, NY</span></div>
-          <div class="experience-role"><h3>Associate Producer</h3><p>The Red Fox Report</p></div>
-          <p class="experience-detail">Produces Red Fox Report episodes for ESPN+ and YouTube, leads meetings, creates rundowns, and supports student contributors.</p>
-        </article>
-        <article>
-          <div class="experience-when"><p>March 2024 - Present</p><span>Long Island, NY</span></div>
-          <div class="experience-role"><h3>Umpire</h3><p>Big Apple Umpires</p></div>
-          <p class="experience-detail">Umpires 8U through 15U baseball throughout Long Island.</p>
-        </article>
-        <article>
-          <div class="experience-when"><p>February 2023 - March 2024</p><span>Queens, NY</span></div>
-          <div class="experience-role"><h3>Assistant Coach, 8U/10U</h3><p>Hard90 Baseball</p></div>
-          <p class="experience-detail">Taught hitting, fielding, and pitching in individual, group, and full-team settings.</p>
-        </article>
+        <article><p class="experience-when">Apr 2026–Current · Remote</p><div><h3>Baseball Data &amp; Development Intern</h3><p class="organization">Diamond Hitting Development</p><p>Leads the creation of internal data systems and external user interfaces for DHD clients.</p></div></article>
+        <article><p class="experience-when">Summer 2026 · Remote</p><div><h3>Scouting Intern</h3><p class="organization">SportsForce Baseball</p><p>Video- and metric-based evaluation of uncommitted hitters and pitchers, recruiting support, and ad hoc data projects in R and Python.</p></div></article>
+        <article><p class="experience-when">Aug 2025–Present · Poughkeepsie, NY</p><div><h3>Associate Producer</h3><p class="organization">The Red Fox Report</p><p>Produces episodes for ESPN+ and YouTube, leads meetings, creates rundowns, and supports student contributors.</p></div></article>
+        <article><p class="experience-when">Aug 2024–Dec 2025 · Poughkeepsie, NY</p><div><h3>Offensive Line Student Assistant</h3><p class="organization">Marist Football (D1, FCS)</p><p>Play signaling, recruiting and player-personnel tasks, on-field coaching, and football operations.</p></div></article>
+        <article><p class="experience-when">Mar 2024–Present · Long Island, NY</p><div><h3>Umpire</h3><p class="organization">Big Apple Umpires</p><p>Umpires 8U through 15U baseball throughout Long Island.</p></div></article>
+        <article><p class="experience-when">Feb 2023–Mar 2024 · Queens, NY</p><div><h3>Assistant Coach, 8U/10U</h3><p class="organization">Hard90 Baseball</p><p>Taught hitting, fielding, and pitching in individual, group, and team settings.</p></div></article>
       </div>
     </section>
 
     <section class="about-section" id="about">
-      <div>
-        <p class="eyebrow">About</p>
-        <h2>Sports communication, baseball judgment, and software.</h2>
-      </div>
+      <div class="section-heading"><p class="eyebrow">Profile</p><h2>About</h2></div>
       <div class="about-copy">
-        <p>I’m a Sports Communication student at Marist University with a 3.69 GPA.</p>
-        <p>My work focuses on baseball player development, programming, and scouting.</p>
+        <p>I’m a Sports Communication student at Marist University with a 3.69 GPA. My work combines baseball evaluation, player-development questions, and practical software.</p>
         <dl>
           <div><dt>Programming</dt><dd>R, Python, Swift, SwiftUI, TypeScript, React, Supabase</dd></div>
           <div><dt>Baseball data</dt><dd>TrackMan, Rapsodo, HitTrax, Blast Motion, MLB Statcast</dd></div>
@@ -297,18 +184,12 @@
 
     <section class="contact-section">
       <p class="eyebrow">Contact</p>
-      <a href="mailto:Lucas.Baquero1@marist.edu">Lucas.Baquero1@marist.edu <span aria-hidden="true">↗</span></a>
+      <a href="mailto:Lucas.Baquero1@marist.edu">Lucas.Baquero1@marist.edu <span>↗</span></a>
       <p>917-658-2985</p>
     </section>
 
-    <footer>
-      <p>© 2026 Lucas Baquero</p>
-      <div>
-        <a href="Lucas_Baquero_Resume.pdf" download>Résumé</a>
-        <a href="https://github.com/LBaquero33" target="_blank" rel="noreferrer">GitHub</a>
-      </div>
-      <a href="#top">Back to top ↑</a>
-    </footer>
+    <footer><p>© 2026 Lucas Baquero</p><div><a href="Lucas_Baquero_Resume.pdf" download>Résumé</a><a href="https://github.com/LBaquero33">GitHub</a></div><a href="#top">Back to top ↑</a></footer>
   </main>
+  <script src="site.js"></script>
 </body>
 </html>

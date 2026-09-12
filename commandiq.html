@@ -3,9 +3,9 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="CommandIQ, Lucas Baquero's computer-vision and bullpen command review project.">
+  <meta name="description" content="CommandIQ, Lucas Baquero's coach-confirmed intended-target and bullpen command review project.">
   <meta property="og:title" content="CommandIQ | Lucas Baquero">
-  <meta property="og:description" content="A bullpen command workflow that reads the catcher's glove flash as the intended target and compares it with the pitch result.">
+  <meta property="og:description" content="A coach-confirmed workflow for comparing intended targets with actual pitch locations.">
   <meta property="og:type" content="article">
   <meta property="og:image" content="https://lbaquero33.github.io/commandiq.jpeg">
   <meta name="twitter:card" content="summary_large_image">
@@ -24,43 +24,49 @@
       <div class="case-shell">
         <a class="case-back" href="index.html#work">← All projects</a>
         <div class="case-hero-grid">
-          <div><p class="eyebrow">Computer vision / pitch review</p><h1 class="case-title-compact">CommandIQ</h1></div>
-          <div><p class="case-deck">A bullpen command workflow that uses the catcher’s glove flash as the intended target and compares it with the pitch result.</p></div>
+          <div><p class="eyebrow">Computer vision / command review</p><h1 class="case-title-compact">CommandIQ</h1></div>
+          <p class="case-deck">A coach-confirmed workflow for comparing a pre-pitch target with the pitch’s actual location.</p>
         </div>
       </div>
     </section>
 
-    <dl class="case-meta">
+    <dl class="case-facts">
       <div><dt>Built with</dt><dd>Swift, Python, Supabase</dd></div>
-      <div><dt>Data</dt><dd>TrackMan and Rapsodo-style CSVs</dd></div>
-      <div><dt>Focus</dt><dd>Computer vision and command review</dd></div>
+      <div><dt>Pitch data</dt><dd>TrackMan and Rapsodo-style CSVs</dd></div>
+      <div><dt>Output</dt><dd>Pitch review, saved sessions, and report export</dd></div>
     </dl>
 
     <div class="case-body">
-      <section class="case-section case-lead">
-        <div><p class="eyebrow">The project</p><h2>The glove flash sets the target.</h2></div>
+      <section class="case-intro">
+        <div><p class="eyebrow">Command review</p><h2>Where was the target, and where did the pitch finish?</h2></div>
         <div class="case-copy">
-          <p>CommandIQ looks for the catcher’s glove flash before the pitch and treats that spot as the intended target.</p>
-          <p>It then compares the target with where the pitch crossed the plate, pairing video with TrackMan or Rapsodo-style data.</p>
-          <p>Coaches confirm the target, review pitches one by one, save sessions, and export the results.</p>
+          <p>The catcher’s glove position before the pitch provides a useful reference for the intended target. CommandIQ keeps that reference beside the pitch’s measured result.</p>
+          <p>A coach can click the target manually or review an optional video-assisted suggestion. Either way, the target remains editable and must be confirmed before it is applied.</p>
+          <p>Actual horizontal and vertical locations come from the imported pitch data. CommandIQ does not claim to infer the pitcher’s true intent.</p>
         </div>
       </section>
 
-      <section class="case-section">
-        <figure class="case-media"><img src="commandiq.jpeg" alt="CommandIQ target overlay on game video"><figcaption>Computer-vision target overlay used in pitch review</figcaption></figure>
+      <section class="content-section">
+        <p class="eyebrow">Review frame</p>
+        <h2>The glove target stays reviewable.</h2>
+        <p class="section-copy">The marked point is a coach-reviewed intended target. Plate and strike-zone calibration are also reviewed before pixel locations are converted into baseball measurements.</p>
+        <figure class="evidence-figure"><img src="commandiq.jpeg" alt="CommandIQ video frame with a coach-reviewed intended-target marker"><figcaption>Intended-target review frame · the overlay is not automatic proof of pitch intent</figcaption></figure>
       </section>
 
-      <section class="case-section">
-        <div class="case-section-head"><div><p class="eyebrow">Workflow</p><h2 class="case-section-title">Built around the review process.</h2></div><p>The product keeps pitch data, intended location, video evidence, and saved results in one continuous workflow.</p></div>
-        <div class="case-points">
-          <article><span>01</span><h3>Find the glove</h3><p>Use the catcher’s pre-pitch glove flash to mark the intended target.</p></article>
-          <article><span>02</span><h3>Compare the result</h3><p>See the target and actual pitch location together, with the coach confirming the read.</p></article>
-          <article><span>03</span><h3>Keep the record</h3><p>Store sessions, revisit pitch history, and export a report for continued development work.</p></article>
-        </div>
+      <section class="content-section">
+        <p class="eyebrow">Workflow</p>
+        <h2>What the system does—and what the coach confirms</h2>
+        <ul class="detail-list">
+          <li><strong>Import</strong><span>Reads supported pitch type, velocity, and actual-location columns from TrackMan or Rapsodo-style exports.</span></li>
+          <li><strong>Mark the target</strong><span>Accepts a manual video click or an optional computer-vision suggestion. Manual entry remains available.</span></li>
+          <li><strong>Confirm calibration</strong><span>Plate and strike-zone proposals remain editable and are never applied automatically.</span></li>
+          <li><strong>Review execution</strong><span>Compares the confirmed target with actual pitch location and keeps the evidence with the session.</span></li>
+        </ul>
+        <div class="project-note"><p><strong>Current status:</strong> the macOS workflow and service layer have been tested. Computer-vision suggestions are optional and can fall back safely to manual target entry.</p></div>
       </section>
     </div>
 
-    <section class="case-next"><a href="butler-pitch-tunnel.html">Next project <span>Butler Pitch Tunnel →</span></a></section>
+    <section class="case-next"><a href="hitter-damage.html">Next project <span>Hitter Damage →</span></a></section>
     <footer><p>© 2026 Lucas Baquero</p><div><a href="index.html#work">All projects</a><a href="Lucas_Baquero_Resume.pdf" download>Résumé</a></div><a href="mailto:Lucas.Baquero1@marist.edu">Contact</a></footer>
   </main>
 </body>

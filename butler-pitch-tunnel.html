@@ -3,9 +3,9 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Butler Pitch Tunnel, Lucas Baquero's TrackMan-based pitch-flight analysis project.">
+  <meta name="description" content="Butler Pitch Tunnel, Lucas Baquero's TrackMan pitch-flight reconstruction and comparison project.">
   <meta property="og:title" content="Butler Pitch Tunnel | Lucas Baquero">
-  <meta property="og:description" content="Individual TrackMan pitch-pair reconstruction, measured flight playback, release geometry, separation, shape, and spin analysis.">
+  <meta property="og:description" content="A behind-the-zone reconstruction of a Butler fastball and slider pair.">
   <meta property="og:type" content="article">
   <meta property="og:image" content="https://lbaquero33.github.io/butler-tunnel-behind-zone-plate.jpg">
   <meta name="twitter:card" content="summary_large_image">
@@ -25,50 +25,58 @@
         <a class="case-back" href="index.html#work">← All projects</a>
         <div class="case-hero-grid">
           <div><p class="eyebrow">Pitch-flight analysis / player development</p><h1>Butler Pitch Tunnel</h1></div>
-          <div>
-            <p class="case-deck">A coach-facing way to compare two real pitches from release through the hitter’s decision and into the plate.</p>
-            <div class="case-actions"><a class="case-button primary" href="https://ltbaquero.shinyapps.io/DHDApp/" target="_blank" rel="noreferrer">Open live analysis ↗</a></div>
-          </div>
+          <div><p class="case-deck">A TrackMan reconstruction showing how one fastball–slider pair shares an early lane and separates on the way to the plate.</p><div class="case-actions"><a class="case-button primary" href="https://ltbaquero.shinyapps.io/DHDApp/" target="_blank" rel="noreferrer">Open Shiny app ↗</a></div></div>
         </div>
       </div>
     </section>
 
-    <dl class="case-meta">
-      <div><dt>Built with</dt><dd>R, Shiny, Plotly, TrackMan</dd></div>
-      <div><dt>Dataset</dt><dd>6,573 Butler pitches from 17 pitchers</dd></div>
-      <div><dt>Focus</dt><dd>Individual pitch pairs and measured flight</dd></div>
+    <dl class="case-facts">
+      <div><dt>Source</dt><dd>Butler TrackMan pitch records</dd></div>
+      <div><dt>Selected pair</dt><dd>Fastball and slider</dd></div>
+      <div><dt>Plate separation</dt><dd>18.3 inches for the shown pair</dd></div>
     </dl>
 
-    <div class="case-body case-dark-stage">
-      <section class="case-section">
-        <figure class="case-media"><img src="butler-tunnel-behind-zone.gif" alt="Animated catcher-side view of a Butler slider and fastball separating late behind a visible strike zone"><figcaption>Slider × fastball · behind the strike zone · 18.3 inches apart at the plate · 0.25× playback</figcaption></figure>
-      </section>
-
-      <section class="case-section case-lead">
-        <div><p class="project-type">The question</p><h2 style="color:white">Do they look alike long enough?</h2></div>
+    <div class="case-body">
+      <section class="case-intro">
+        <div><p class="eyebrow">Pitch comparison</p><h2>Do these two pitches stay together long enough to matter?</h2></div>
         <div class="case-copy">
-          <p style="color:white">The selected slider and fastball start from nearly the same release, remain close around the hitter’s decision, and finish 18.3 inches apart.</p>
-          <p>Rather than grading an arsenal in the abstract, the tool reconstructs actual individual TrackMan trajectories and lets the coach inspect the exact pair.</p>
-          <p>Measured flight timing, release geometry, separation, pitch shape, spin, game changes, and coach notes provide context for the visual result.</p>
+          <p>The app reconstructs individual pitch trajectories rather than drawing generic pitch shapes.</p>
+          <p>The behind-the-zone view keeps the release lane, the decision window, and the full strike zone visible while both pitches travel toward the plate.</p>
+          <p>The pair shown here starts from a similar release area and finishes 18.3 inches apart. That is a description of modeled flight—not proof of hitter deception or effectiveness.</p>
         </div>
       </section>
 
-      <section class="case-section">
-        <div class="case-section-head"><div><p class="project-type">Behind the zone</p><h2 class="case-section-title" style="color:white">Watch the break develop toward the plate.</h2></div><p>The camera stays directly behind the strike zone, keeping the complete path, both baseballs, and the late separation in one view.</p></div>
-        <div class="case-visual-grid">
-          <figure><img src="butler-tunnel-behind-zone-release.jpg" alt="Butler slider and fastball sharing the same release lane from behind the strike zone"><figcaption>Out of the hand · nearly the same lane</figcaption></figure>
-          <figure><img src="butler-tunnel-behind-zone-decision.jpg" alt="Butler slider and fastball remaining close before separating from behind the strike zone"><figcaption>Decision window · the break starts to show</figcaption></figure>
-          <figure class="case-wide"><img src="butler-tunnel-behind-zone-plate.jpg" alt="Butler slider and fastball separated at the plate with the strike zone visible"><figcaption>At the plate · 18.3 inches apart</figcaption></figure>
+      <section class="content-section">
+        <p class="eyebrow">Modeled flight</p>
+        <h2>Release, flight, and finish in one view</h2>
+        <p class="section-copy">Pause the animation to inspect the full strike zone, or replay it to compare how the break develops.</p>
+        <div class="dark-stage">
+          <figure class="motion-figure">
+            <img id="butler-case-motion" src="butler-tunnel-behind-zone.gif" data-animated-source="butler-tunnel-behind-zone.gif" data-still-source="butler-tunnel-behind-zone-release.jpg" alt="Modeled Butler fastball and slider trajectories viewed from behind a visible strike zone">
+            <figcaption><span>Fastball–slider pair · 18.3 inches apart at the plate · slowed playback</span><button type="button" data-motion-toggle="butler-case-motion" aria-pressed="true">Pause animation</button></figcaption>
+          </figure>
         </div>
       </section>
 
-      <section class="case-section">
-        <div class="case-section-head"><div><p class="project-type">Supporting evidence</p><h2 class="case-section-title" style="color:white">Why the pair works.</h2></div><p>Release, separation, shape, and spin views explain the flight instead of asking the animation to stand alone.</p></div>
-        <div class="case-visual-grid">
-          <figure><img src="butler-release-check.jpg" alt="Release check for the Butler slider and fastball"><figcaption>Release check</figcaption></figure>
-          <figure><img src="butler-separation.jpg" alt="Tunnel separation curve for the Butler slider and fastball"><figcaption>Separation through flight</figcaption></figure>
-          <figure class="case-wide"><img src="butler-pitch-shape.jpg" alt="Modeled pitch-shape development"><figcaption>Pitch-shape development</figcaption></figure>
-          <figure class="case-wide"><img src="butler-spin-movement.jpg" alt="Butler spin and movement clusters"><figcaption>Spin and movement context</figcaption></figure>
+      <section class="content-section">
+        <p class="eyebrow">Flight stages</p>
+        <h2>Three points in the same reconstruction</h2>
+        <div class="case-gallery">
+          <figure><img src="butler-tunnel-behind-zone-release.jpg" alt="Butler fastball and slider sharing a similar release lane"><figcaption>Out of the hand · similar release lane</figcaption></figure>
+          <figure><img src="butler-tunnel-behind-zone-decision.jpg" alt="Butler fastball and slider beginning to separate before the plate"><figcaption>Decision window · separation begins</figcaption></figure>
+          <figure class="wide"><img src="butler-tunnel-behind-zone-plate.jpg" alt="Butler fastball and slider separated at home plate with the entire strike zone visible"><figcaption>At the plate · 18.3 inches apart</figcaption></figure>
+        </div>
+      </section>
+
+      <section class="content-section">
+        <p class="eyebrow">Supporting analysis</p>
+        <h2>Measurements behind the animation</h2>
+        <p class="section-copy">The release-point check, separation curve, modeled shape, and spin/movement context explain what is being drawn and help a coach inspect the selected pair.</p>
+        <div class="case-gallery">
+          <figure><img src="butler-release-check.jpg" alt="Release-point comparison for the selected Butler fastball and slider"><figcaption>Release-point comparison</figcaption></figure>
+          <figure><img src="butler-separation.jpg" alt="Separation curve for the selected Butler fastball and slider"><figcaption>Separation through flight</figcaption></figure>
+          <figure class="wide"><img src="butler-pitch-shape.jpg" alt="Modeled pitch-shape development for the selected Butler pitches"><figcaption>Modeled shape from release to plate</figcaption></figure>
+          <figure class="wide"><img src="butler-spin-movement.jpg" alt="Spin and movement context for the Butler pitch arsenal"><figcaption>Spin and movement context</figcaption></figure>
         </div>
       </section>
     </div>
@@ -76,5 +84,6 @@
     <section class="case-next"><a href="ball-fox.html">Next project <span>Ball Fox →</span></a></section>
     <footer><p>© 2026 Lucas Baquero</p><div><a href="index.html#work">All projects</a><a href="Lucas_Baquero_Resume.pdf" download>Résumé</a></div><a href="mailto:Lucas.Baquero1@marist.edu">Contact</a></footer>
   </main>
+  <script src="site.js"></script>
 </body>
 </html>
