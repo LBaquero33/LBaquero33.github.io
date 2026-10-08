@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="CommandIQ Motion Lab: fixed-camera estimated 3D pitching motion paired with a reviewed TrackMan pitch row.">
+  <meta property="og:title" content="CommandIQ Motion Lab | Lucas Baquero">
+  <meta property="og:description" content="A reviewable pitching replay with estimated motion, source video, events, and measured flight.">
+  <meta property="og:type" content="article">
+  <meta property="og:image" content="https://lbaquero33.github.io/MotionLab-Replay.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <title>CommandIQ Motion Lab | Lucas Baquero</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="project-page-body">
+  <main>
+    <header class="site-header">
+      <a class="nameplate" href="index.html">Lucas Baquero</a>
+      <nav aria-label="Main navigation"><a href="index.html#work">Projects</a><a href="index.html#experience">Experience</a><a href="index.html#about">About</a></nav>
+      <a class="resume-link" href="LucasBaqueroCV.pdf" download>Download CV</a>
+    </header>
+
+    <section class="case-hero">
+      <div class="case-shell">
+        <a class="case-back" href="index.html#work">← All projects</a>
+        <div class="case-hero-grid">
+          <div><p class="eyebrow">Single-camera motion review</p><h1>CommandIQ Motion Lab</h1></div>
+          <p class="case-deck">A pitching session review that keeps estimated motion, source video, event markers, and a reviewed TrackMan pitch row on one timeline.</p>
+        </div>
+      </div>
+    </section>
+
+    <dl class="case-facts">
+      <div><dt>Input</dt><dd>Fixed-camera video and a TrackMan export</dd></div>
+      <div><dt>Review</dt><dd>Pitch pairing and candidate events</dd></div>
+      <div><dt>Output</dt><dd>Portable replay and coach report</dd></div>
+    </dl>
+
+    <div class="case-body">
+      <section class="case-intro">
+        <div><p class="eyebrow">What the replay shows</p><h2>One reviewable pitch timeline</h2></div>
+        <div class="case-copy">
+          <p>The workflow starts with a fixed-camera recording, then asks a reviewer to confirm the pitch match and inspect event candidates.</p>
+          <p>The replay aligns source video, estimated 3D pitcher motion, event markers, and measured ball-flight facts from the reviewed TrackMan row.</p>
+          <p>The motion is a single-camera estimate. It is not validated motion capture, a force or torque measurement, or a medical assessment.</p>
+        </div>
+      </section>
+
+      <section class="content-section" id="gallery">
+        <p class="eyebrow">Image gallery</p>
+        <h2>Setup and skeleton-only replay</h2>
+        <p class="section-copy">These captures show the actual local application interface. The replay image omits player identity and source video.</p>
+        <div class="case-gallery">
+          <figure class="portrait-capture"><a href="MotionLab-Setup.png" target="_blank" rel="noopener"><img src="MotionLab-Setup.png" alt="CommandIQ Motion Lab local combine workflow for adding files, matching pitches, and building a 3D session"></a><figcaption>Combine workflow · add files, match pitches, build a session</figcaption></figure>
+          <figure class="portrait-capture"><a href="MotionLab-Replay.jpg" target="_blank" rel="noopener"><img src="MotionLab-Replay.jpg" alt="Motion Lab skeleton-only replay at the release event, with playback and event review controls"></a><figcaption>Replay · estimated skeleton and review controls, without source video</figcaption></figure>
+        </div>
+      </section>
+
+      <section class="content-section">
+        <p class="eyebrow">Interpretation</p><h2>Motion estimate beside measured flight</h2>
+        <ul class="detail-list">
+          <li><strong>Pairing</strong><span>The reviewer confirms which TrackMan row belongs with the video before measured pitch facts appear in the replay.</span></li>
+          <li><strong>Events</strong><span>Leg lift, foot contact, release, and follow-through are candidate markers that can be reviewed on the shared playhead.</span></li>
+          <li><strong>Limits</strong><span>Depth and physical timing are bounded by the camera view and available source evidence.</span></li>
+        </ul>
+      </section>
+    </div>
+
+    <section class="case-next"><a href="commandiq.html">Continue through the work <span>CommandIQ →</span></a></section>
+    <footer><p>© 2026 Lucas Baquero</p><div><a href="index.html#work">All projects</a><a href="LucasBaqueroCV.pdf" download>CV</a><a href="LucasBaqueroPO.pdf" download>Portfolio PDF</a></div><a href="mailto:Lucas.Baquero1@marist.edu">Contact</a></footer>
+  </main>
+</body>
+</html>
