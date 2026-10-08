@@ -3,71 +3,56 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="CommandIQ, Lucas Baquero's coach-confirmed intended-target and bullpen command review project.">
+  <meta name="description" content="CommandIQ: computer vision for reviewing a pitcher's intended target against where the pitch went.">
   <meta property="og:title" content="CommandIQ | Lucas Baquero">
-  <meta property="og:description" content="A coach-confirmed workflow for comparing intended targets with actual pitch locations.">
+  <meta property="og:description" content="Computer vision for intended-location review.">
   <meta property="og:type" content="article">
   <meta property="og:image" content="https://lbaquero33.github.io/commandiq.jpeg">
   <meta name="twitter:card" content="summary_large_image">
   <title>CommandIQ | Lucas Baquero</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wdth,wght@0,62..125,100..900;1,62..125,100..900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
-<body class="project-page-body">
+<body>
   <main>
     <header class="site-header">
       <a class="nameplate" href="index.html">Lucas Baquero</a>
-      <nav aria-label="Main navigation"><a href="index.html#work">Projects</a><a href="index.html#experience">Experience</a><a href="index.html#about">About</a></nav>
-      <a class="resume-link" href="LucasBaqueroCV.pdf" download>Download CV</a>
+      <nav aria-label="Main navigation"><a href="index.html#work">Projects</a><a href="index.html#experience">Experience</a><a href="index.html#education">Education</a></nav>
+      <a class="resume-link" href="LucasBaqueroCV.pdf" download>Download resume</a>
     </header>
 
     <section class="case-hero">
-      <div class="case-shell">
-        <a class="case-back" href="index.html#work">← All projects</a>
-        <div class="case-hero-grid">
-          <div><p class="eyebrow">Computer vision / command review</p><h1 class="case-title-compact">CommandIQ</h1></div>
-          <p class="case-deck">A coach-confirmed workflow for comparing a pre-pitch target with the pitch’s actual location.</p>
+      <a class="case-back" href="index.html#work">← All projects</a>
+      <p class="eyebrow">Computer vision</p>
+      <h1>CommandIQ</h1>
+      <p class="case-deck">Computer vision for intended-location review</p>
+    </section>
+
+    <section class="content-section" style="border-top:0;margin-top:12px">
+      <figure><img src="commandiq.jpeg" alt="Game video with a crosshair drawn where the catcher set up"><figcaption><b>Target overlay on game video.</b> The crosshair marks where the catcher set up.</figcaption></figure>
+      <div class="cols" style="margin-top:28px">
+        <p class="lead" style="margin-top:0">CommandIQ draws the intended target on video, so you can see where a pitch was supposed to go and how far it missed.</p>
+        <div>
+          <p>It covers a full bullpen in one place: the video, target entry and pitch-by-pitch review.</p>
+          <p style="margin-top:10px">The user confirms each target, and the session exports as a report.</p>
         </div>
       </div>
     </section>
 
-    <dl class="case-facts">
-      <div><dt>Built with</dt><dd>Swift, Python, Supabase</dd></div>
-      <div><dt>Pitch data</dt><dd>TrackMan and Rapsodo-style CSVs</dd></div>
-      <div><dt>Output</dt><dd>Pitch review, saved sessions, and report export</dd></div>
-    </dl>
+    <section class="content-section">
+      <h2>How it works</h2>
+      <ul class="detail-list">
+        <li><strong>Import</strong><span>Reads pitch type, velocity and location from TrackMan or Rapsodo-style exports.</span></li>
+        <li><strong>Mark the target</strong><span>Click the catcher’s glove on the video, or start from a computer-vision suggestion.</span></li>
+        <li><strong>Confirm</strong><span>Nothing is applied until the coach confirms the target and the strike-zone calibration.</span></li>
+        <li><strong>Review</strong><span>Compare the confirmed target with where the pitch finished.</span></li>
+      </ul>
+    </section>
 
-    <div class="case-body">
-      <section class="case-intro">
-        <div><p class="eyebrow">Command review</p><h2>Where was the target, and where did the pitch finish?</h2></div>
-        <div class="case-copy">
-          <p>The catcher’s glove position before the pitch provides a useful reference for the intended target. CommandIQ keeps that reference beside the pitch’s measured result.</p>
-          <p>A coach can click the target manually or review an optional video-assisted suggestion. Either way, the target remains editable and must be confirmed before it is applied.</p>
-          <p>Actual horizontal and vertical locations come from the imported pitch data. CommandIQ does not claim to infer the pitcher’s true intent.</p>
-        </div>
-      </section>
-
-      <section class="content-section">
-        <p class="eyebrow">Review frame</p>
-        <h2>The glove target stays reviewable.</h2>
-        <p class="section-copy">The marked point is a coach-reviewed intended target. Plate and strike-zone calibration are also reviewed before pixel locations are converted into baseball measurements.</p>
-        <figure class="evidence-figure"><img src="commandiq.jpeg" alt="CommandIQ video frame with a coach-reviewed intended-target marker"><figcaption>Intended-target review frame · the overlay is not automatic proof of pitch intent</figcaption></figure>
-      </section>
-
-      <section class="content-section">
-        <p class="eyebrow">Workflow</p>
-        <h2>What the system does—and what the coach confirms</h2>
-        <ul class="detail-list">
-          <li><strong>Import</strong><span>Reads supported pitch type, velocity, and actual-location columns from TrackMan or Rapsodo-style exports.</span></li>
-          <li><strong>Mark the target</strong><span>Accepts a manual video click or an optional computer-vision suggestion. Manual entry remains available.</span></li>
-          <li><strong>Confirm calibration</strong><span>Plate and strike-zone proposals remain editable and are never applied automatically.</span></li>
-          <li><strong>Review execution</strong><span>Compares the confirmed target with actual pitch location and keeps the evidence with the session.</span></li>
-        </ul>
-        <div class="project-note"><p><strong>Current status:</strong> the macOS workflow and service layer have been tested. Computer-vision suggestions are optional and can fall back safely to manual target entry.</p></div>
-      </section>
-    </div>
-
-    <section class="case-next"><a href="hitter-damage.html">Next project <span>Hitter Damage →</span></a></section>
-    <footer><p>© 2026 Lucas Baquero</p><div><a href="index.html#work">All projects</a><a href="LucasBaqueroCV.pdf" download>CV</a><a href="LucasBaqueroPO.pdf" download>Portfolio PDF</a></div><a href="mailto:Lucas.Baquero1@marist.edu">Contact</a></footer>
+    <section class="case-next"><a href="mlb-attack.html">Next project <span>MLB Attack: Pitch Sequencer →</span></a></section>
+    <footer><p>© 2026 Lucas Baquero</p><div><a href="index.html#work">All projects</a><a href="LucasBaqueroCV.pdf" download>Resume PDF</a><a href="LucasBaqueroPO.pdf" download>Portfolio PDF</a><a href="mailto:Lucas.Baquero1@marist.edu">Contact</a></div></footer>
   </main>
 </body>
 </html>

@@ -3,71 +3,61 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="CommandIQ Motion Lab: fixed-camera estimated 3D pitching motion paired with a reviewed TrackMan pitch row.">
+  <meta name="description" content="CommandIQ Motion Lab: one-camera pitcher motion tracking paired with TrackMan ball flight.">
   <meta property="og:title" content="CommandIQ Motion Lab | Lucas Baquero">
-  <meta property="og:description" content="A reviewable pitching replay with estimated motion, source video, events, and measured flight.">
+  <meta property="og:description" content="One-camera pitcher motion, paired with TrackMan ball flight.">
   <meta property="og:type" content="article">
-  <meta property="og:image" content="https://lbaquero33.github.io/MotionLab-Replay.jpg">
+  <meta property="og:image" content="https://lbaquero33.github.io/motion-lab-joints.jpg">
   <meta name="twitter:card" content="summary_large_image">
   <title>CommandIQ Motion Lab | Lucas Baquero</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wdth,wght@0,62..125,100..900;1,62..125,100..900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
-<body class="project-page-body">
+<body>
   <main>
     <header class="site-header">
       <a class="nameplate" href="index.html">Lucas Baquero</a>
-      <nav aria-label="Main navigation"><a href="index.html#work">Projects</a><a href="index.html#experience">Experience</a><a href="index.html#about">About</a></nav>
-      <a class="resume-link" href="LucasBaqueroCV.pdf" download>Download CV</a>
+      <nav aria-label="Main navigation"><a href="index.html#work">Projects</a><a href="index.html#experience">Experience</a><a href="index.html#education">Education</a></nav>
+      <a class="resume-link" href="LucasBaqueroCV.pdf" download>Download resume</a>
     </header>
 
     <section class="case-hero">
-      <div class="case-shell">
-        <a class="case-back" href="index.html#work">← All projects</a>
-        <div class="case-hero-grid">
-          <div><p class="eyebrow">Single-camera motion review</p><h1>CommandIQ Motion Lab</h1></div>
-          <p class="case-deck">A pitching session review that keeps estimated motion, source video, event markers, and a reviewed TrackMan pitch row on one timeline.</p>
+      <a class="case-back" href="index.html#work">← All projects</a>
+      <p class="eyebrow">Single-camera motion review</p>
+      <h1>CommandIQ Motion Lab</h1>
+      <p class="case-deck">Turns video from one camera into a 3D estimate of a pitcher’s delivery, lined up with the TrackMan data for the same pitch</p>
+    </section>
+
+    <section class="content-section" id="gallery" style="border-top:0;margin-top:12px">
+      <h2>Joint tracking on the camera view</h2>
+      <figure><a href="motion-lab-joints.jpg" target="_blank" rel="noopener"><img src="motion-lab-joints.jpg" alt="Four video frames of a pitcher at leg lift, foot contact, release and follow-through with tracked joints drawn over him"></a><figcaption>The model follows the throwing arm, shoulders, hips, knees and feet through the delivery, and flags four checkpoints for a person to confirm: leg lift, foot contact, release and follow-through.</figcaption></figure>
+    </section>
+
+    <section class="content-section">
+      <h2>Pitch replay</h2>
+      <div class="cols side top">
+        <figure><a href="motion-lab-pitch-replay.jpg" target="_blank" rel="noopener"><img src="motion-lab-pitch-replay.jpg" alt="Pitch replay screen with source video beside a 3D field view and TrackMan numbers above"></a><figcaption>The video plays beside a 3D field view, under the paired TrackMan numbers: 80.0 mph, 6.37 ft release height, 1,976 rpm.</figcaption></figure>
+        <div>
+          <p>The replay and a coach report both export from the session.</p>
+          <p class="quiet" style="margin-top:10px">The 3D motion is an estimate from one camera. It isn’t motion capture or a medical measurement, and TrackMan numbers are attached only after someone reviews the match.</p>
         </div>
       </div>
     </section>
 
-    <dl class="case-facts">
-      <div><dt>Input</dt><dd>Fixed-camera video and a TrackMan export</dd></div>
-      <div><dt>Review</dt><dd>Pitch pairing and candidate events</dd></div>
-      <div><dt>Output</dt><dd>Portable replay and coach report</dd></div>
-    </dl>
+    <section class="content-section">
+      <h2>How it works</h2>
+      <ul class="detail-list">
+        <li><strong>1. Import</strong><span>Bring in a recording from a fixed camera.</span></li>
+        <li><strong>2. Check</strong><span>Confirm the pitch match and the event markers: leg lift, foot contact, release, follow-through.</span></li>
+        <li><strong>3. Compare</strong><span>Look at the estimated motion next to the measured ball flight.</span></li>
+        <li><strong>4. Export</strong><span>Save a replay and a coach report.</span></li>
+      </ul>
+    </section>
 
-    <div class="case-body">
-      <section class="case-intro">
-        <div><p class="eyebrow">What the replay shows</p><h2>One reviewable pitch timeline</h2></div>
-        <div class="case-copy">
-          <p>The workflow starts with a fixed-camera recording, then asks a reviewer to confirm the pitch match and inspect event candidates.</p>
-          <p>The replay aligns source video, estimated 3D pitcher motion, event markers, and measured ball-flight facts from the reviewed TrackMan row.</p>
-          <p>The motion is a single-camera estimate. It is not validated motion capture, a force or torque measurement, or a medical assessment.</p>
-        </div>
-      </section>
-
-      <section class="content-section" id="gallery">
-        <p class="eyebrow">Image gallery</p>
-        <h2>Setup and skeleton-only replay</h2>
-        <p class="section-copy">These captures show the actual local application interface. The replay image omits player identity and source video.</p>
-        <div class="case-gallery">
-          <figure class="portrait-capture"><a href="MotionLab-Setup.png" target="_blank" rel="noopener"><img src="MotionLab-Setup.png" alt="CommandIQ Motion Lab local combine workflow for adding files, matching pitches, and building a 3D session"></a><figcaption>Combine workflow · add files, match pitches, build a session</figcaption></figure>
-          <figure class="portrait-capture"><a href="MotionLab-Replay.jpg" target="_blank" rel="noopener"><img src="MotionLab-Replay.jpg" alt="Motion Lab skeleton-only replay at the release event, with playback and event review controls"></a><figcaption>Replay · estimated skeleton and review controls, without source video</figcaption></figure>
-        </div>
-      </section>
-
-      <section class="content-section">
-        <p class="eyebrow">Interpretation</p><h2>Motion estimate beside measured flight</h2>
-        <ul class="detail-list">
-          <li><strong>Pairing</strong><span>The reviewer confirms which TrackMan row belongs with the video before measured pitch facts appear in the replay.</span></li>
-          <li><strong>Events</strong><span>Leg lift, foot contact, release, and follow-through are candidate markers that can be reviewed on the shared playhead.</span></li>
-          <li><strong>Limits</strong><span>Depth and physical timing are bounded by the camera view and available source evidence.</span></li>
-        </ul>
-      </section>
-    </div>
-
-    <section class="case-next"><a href="commandiq.html">Continue through the work <span>CommandIQ →</span></a></section>
-    <footer><p>© 2026 Lucas Baquero</p><div><a href="index.html#work">All projects</a><a href="LucasBaqueroCV.pdf" download>CV</a><a href="LucasBaqueroPO.pdf" download>Portfolio PDF</a></div><a href="mailto:Lucas.Baquero1@marist.edu">Contact</a></footer>
+    <section class="case-next"><a href="commandiq.html">Next project <span>CommandIQ →</span></a></section>
+    <footer><p>© 2026 Lucas Baquero</p><div><a href="index.html#work">All projects</a><a href="LucasBaqueroCV.pdf" download>Resume PDF</a><a href="LucasBaqueroPO.pdf" download>Portfolio PDF</a><a href="mailto:Lucas.Baquero1@marist.edu">Contact</a></div></footer>
   </main>
 </body>
 </html>

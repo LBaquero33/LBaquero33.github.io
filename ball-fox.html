@@ -3,63 +3,43 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Base Player Development Dashboard, Lucas Baquero's college baseball R Shiny reporting project.">
+  <meta name="description" content="Base Player Development Dashboard: college hitter and pitcher reports built in R and Shiny on TrackMan data.">
   <meta property="og:title" content="Base Player Development Dashboard | Lucas Baquero">
-  <meta property="og:description" content="College hitter and pitcher reports built from TrackMan-exportable data.">
+  <meta property="og:description" content="College hitter and pitcher reports built on TrackMan data.">
   <meta property="og:type" content="article">
   <meta property="og:image" content="https://lbaquero33.github.io/ballfox-hitter.jpg">
   <meta name="twitter:card" content="summary_large_image">
   <title>Base Player Development Dashboard | Lucas Baquero</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wdth,wght@0,62..125,100..900;1,62..125,100..900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
-<body class="project-page-body">
+<body>
   <main>
     <header class="site-header">
       <a class="nameplate" href="index.html">Lucas Baquero</a>
-      <nav aria-label="Main navigation"><a href="index.html#work">Projects</a><a href="index.html#experience">Experience</a><a href="index.html#about">About</a></nav>
-      <a class="resume-link" href="LucasBaqueroCV.pdf" download>Download CV</a>
+      <nav aria-label="Main navigation"><a href="index.html#work">Projects</a><a href="index.html#experience">Experience</a><a href="index.html#education">Education</a></nav>
+      <a class="resume-link" href="LucasBaqueroCV.pdf" download>Download resume</a>
     </header>
 
     <section class="case-hero">
-      <div class="case-shell">
-        <a class="case-back" href="index.html#work">← All projects</a>
-        <div class="case-hero-grid">
-          <div><p class="eyebrow">College player development</p><h1>Base Player Development Dashboard</h1></div>
-          <div><p class="case-deck">Hitter and pitcher reporting from TrackMan-exportable data, built around goals and coaching context.</p><div class="case-actions"><a class="case-button primary" href="https://ltbaquero.shinyapps.io/Marist_App/" target="_blank" rel="noreferrer">Open Shiny app ↗</a></div></div>
-        </div>
+      <a class="case-back" href="index.html#work">← All projects</a>
+      <p class="eyebrow">College player development</p>
+      <h1>Base Player Development Dashboard</h1>
+      <p class="case-deck">Ball Fox Report samples from college baseball, built in R and Shiny on TrackMan data</p>
+      <div class="case-actions"><a class="case-button primary" href="https://ltbaquero.shinyapps.io/Marist_App/" target="_blank" rel="noreferrer">Open the Shiny app ↗</a></div>
+    </section>
+
+    <section class="content-section" style="border-top:0;margin-top:12px">
+      <div class="case-gallery">
+        <figure class="paper"><a href="ballfox-hitter.jpg" target="_blank" rel="noopener"><img src="ballfox-hitter-crop.jpg" alt="Two-strike dashboard with a spray chart, whiff rate by zone and a summary table"></a><figcaption><b>Tim Flagger: two-strike dashboard.</b> Spray chart, whiff rate by zone, chase and contact, with plain-English answers about his two-strike approach.</figcaption></figure>
+        <figure class="paper"><a href="ballfox-pitcher.jpg" target="_blank" rel="noopener"><img src="ballfox-pitcher-crop.jpg" alt="Pitcher summary tables for results by pitch type, put-away pitches, usage by count and command"></a><figcaption><b>Carson Sentz: pitcher summary.</b> Results by pitch type, put-away pitches, usage by count and command, on one page a coach can read.</figcaption></figure>
       </div>
     </section>
 
-    <dl class="case-facts">
-      <div><dt>Built with</dt><dd>R, Shiny, TrackMan exports</dd></div>
-      <div><dt>Audience</dt><dd>College players and coaches</dd></div>
-      <div><dt>Output</dt><dd>Player-level hitter and pitcher reports</dd></div>
-    </dl>
-
-    <div class="case-body">
-      <section class="case-intro">
-        <div><p class="eyebrow">Development review</p><h2>What changed, and what should the player work on next?</h2></div>
-        <div class="case-copy">
-          <p>I built the dashboard to track hitting and pitching performance over time and to keep individual goals beside the results.</p>
-          <p>The report is meant to support a coaching conversation. It adds count, usage, command, and two-strike context instead of presenting one undifferentiated stat line.</p>
-          <p>Hitter and pitcher views use different summaries because their development questions are different.</p>
-        </div>
-      </section>
-
-      <section class="content-section">
-        <p class="eyebrow">Report examples</p>
-        <h2>Two reports, two coaching questions</h2>
-        <p class="section-copy">Open either image at full size to read the report.</p>
-        <div class="case-gallery">
-          <figure><a href="ballfox-hitter.jpg" target="_blank"><img src="ballfox-hitter.jpg" alt="Ball Fox two-strike hitter report"></a><figcaption>Hitter question: how is the approach changing with two strikes?</figcaption></figure>
-          <figure><a href="ballfox-pitcher.jpg" target="_blank"><img src="ballfox-pitcher.jpg" alt="Ball Fox pitcher report covering usage, results, and command"></a><figcaption>Pitcher question: how are usage and command changing by count?</figcaption></figure>
-        </div>
-        <div class="project-note"><p><strong>Use:</strong> track a goal, review the relevant split, and use the report as context for the next development conversation.</p></div>
-      </section>
-    </div>
-
-    <section class="case-next"><a href="home-plate.html">Next project <span>Home Plate →</span></a></section>
-    <footer><p>© 2026 Lucas Baquero</p><div><a href="index.html#work">All projects</a><a href="LucasBaqueroCV.pdf" download>CV</a><a href="LucasBaqueroPO.pdf" download>Portfolio PDF</a></div><a href="mailto:Lucas.Baquero1@marist.edu">Contact</a></footer>
+    <section class="case-next"><a href="hitter-damage.html">Next project <span>Hitter Damage & Swing Efficiency →</span></a></section>
+    <footer><p>© 2026 Lucas Baquero</p><div><a href="index.html#work">All projects</a><a href="LucasBaqueroCV.pdf" download>Resume PDF</a><a href="LucasBaqueroPO.pdf" download>Portfolio PDF</a><a href="mailto:Lucas.Baquero1@marist.edu">Contact</a></div></footer>
   </main>
 </body>
 </html>

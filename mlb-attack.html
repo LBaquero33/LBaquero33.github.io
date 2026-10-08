@@ -3,70 +3,46 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="MLB Attack Pitch Sequencer, Lucas Baquero's count-by-count pitch-planning project.">
-  <meta property="og:title" content="MLB Attack Pitch Sequencer | Lucas Baquero">
-  <meta property="og:description" content="A count-by-count primary and backup pitch-location planning sheet.">
+  <meta name="description" content="MLB Attack Pitch Sequencer: a pitch plan for every count.">
+  <meta property="og:title" content="MLB Attack: Pitch Sequencer | Lucas Baquero">
+  <meta property="og:description" content="A pitch plan for every count.">
   <meta property="og:type" content="article">
   <meta property="og:image" content="https://lbaquero33.github.io/pitch-sequencer-excerpt.jpg">
   <meta name="twitter:card" content="summary_large_image">
-  <title>MLB Attack Pitch Sequencer | Lucas Baquero</title>
+  <title>MLB Attack: Pitch Sequencer | Lucas Baquero</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wdth,wght@0,62..125,100..900;1,62..125,100..900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
-<body class="project-page-body">
+<body>
   <main>
     <header class="site-header">
       <a class="nameplate" href="index.html">Lucas Baquero</a>
-      <nav aria-label="Main navigation"><a href="index.html#work">Projects</a><a href="index.html#experience">Experience</a><a href="index.html#about">About</a></nav>
-      <a class="resume-link" href="LucasBaqueroCV.pdf" download>Download CV</a>
+      <nav aria-label="Main navigation"><a href="index.html#work">Projects</a><a href="index.html#experience">Experience</a><a href="index.html#education">Education</a></nav>
+      <a class="resume-link" href="LucasBaqueroCV.pdf" download>Download resume</a>
     </header>
 
     <section class="case-hero">
-      <div class="case-shell">
-        <a class="case-back" href="index.html#work">← All projects</a>
-        <div class="case-hero-grid">
-          <div><p class="eyebrow">Pitch planning / scouting</p><h1>MLB Attack Pitch Sequencer</h1></div>
-          <p class="case-deck">A count-by-count attack plan with a primary call and a backup pitch-location option.</p>
+      <a class="case-back" href="index.html#work">← All projects</a>
+      <p class="eyebrow">Pitch planning</p>
+      <h1>MLB Attack: Pitch Sequencer</h1>
+      <p class="case-deck">A pitch plan for every count</p>
+    </section>
+
+    <section class="content-section" style="border-top:0;margin-top:12px">
+      <div class="cols side top" style="grid-template-columns:minmax(200px,280px) 1fr">
+        <div>
+          <p class="lead" style="margin-top:0">For each count, the sequencer gives a first-choice pitch and location, plus a backup.</p>
+          <p style="margin-top:14px">It builds one plan for the first time through the order and another for the second.</p>
+          <p class="quiet" style="margin-top:10px">Shown: Aaron Nola against Gleyber Torres.</p>
         </div>
+        <figure class="paper"><a href="pitch-sequencer.jpg" target="_blank" rel="noopener"><img src="pitch-sequencer-crop.jpg" alt="Count-by-count pitch plan for Aaron Nola against Gleyber Torres, first and second time through the order"></a><figcaption>Open the image for the full sheet.</figcaption></figure>
       </div>
     </section>
 
-    <dl class="case-facts">
-      <div><dt>Built with</dt><dd>R and Shiny</dd></div>
-      <div><dt>Inputs</dt><dd>Hitter tendencies and selected pitcher context</dd></div>
-      <div><dt>Output</dt><dd>Primary and backup calls for the count matrix</dd></div>
-    </dl>
-
-    <div class="case-body">
-      <section class="case-intro">
-        <div><p class="eyebrow">Game planning</p><h2>What is the plan if the count changes?</h2></div>
-        <div class="case-copy">
-          <p>The sequencer organizes a matchup plan so the pitcher or coach can find the count, read the first option, and keep a second call ready.</p>
-          <p>The recommendations are built from hitter tendencies and the selected pitcher’s context. The sheet separates first and second times through the order when the available plan calls for it.</p>
-          <p>This is a planning aid, not an automated in-game decision. A coach or scout still reviews pitch fit, health, command that day, and the game situation.</p>
-        </div>
-      </section>
-
-      <section class="content-section">
-        <p class="eyebrow">Report excerpt</p>
-        <h2>The pitch sequencer</h2>
-        <p class="section-copy">The excerpt keeps the matchup heading and opening count rows readable. Open the full report to inspect the complete count matrix.</p>
-        <figure class="evidence-figure contain"><a href="pitch-sequencer.jpg" target="_blank"><img src="pitch-sequencer-excerpt.jpg" alt="Excerpt of the MLB Attack pitch sequencer for Aaron Nola against Gleyber Torres"></a><figcaption>Example matchup · click to open the full count-by-count sheet</figcaption></figure>
-      </section>
-
-      <section class="content-section">
-        <p class="eyebrow">How to read it</p>
-        <h2>Inputs and limits stay visible</h2>
-        <ul class="detail-list">
-          <li><strong>Hitter tendency</strong><span>Frames the pitch types and locations relevant to the matchup.</span></li>
-          <li><strong>Pitcher context</strong><span>Keeps the plan tied to the selected pitcher rather than a generic attack pattern.</span></li>
-          <li><strong>Primary and backup</strong><span>Gives the coach an alternate call without leaving the count matrix.</span></li>
-          <li><strong>Limitation</strong><span>The report does not know game-day feel, fatigue, injury, or unexpected command changes.</span></li>
-        </ul>
-      </section>
-    </div>
-
-    <section class="case-next"><a href="selfscout.html">Next project <span>SelfScout →</span></a></section>
-    <footer><p>© 2026 Lucas Baquero</p><div><a href="index.html#work">All projects</a><a href="LucasBaqueroCV.pdf" download>CV</a><a href="LucasBaqueroPO.pdf" download>Portfolio PDF</a></div><a href="mailto:Lucas.Baquero1@marist.edu">Contact</a></footer>
+    <section class="case-next"><a href="ball-fox.html">Next project <span>Base Player Development Dashboard →</span></a></section>
+    <footer><p>© 2026 Lucas Baquero</p><div><a href="index.html#work">All projects</a><a href="LucasBaqueroCV.pdf" download>Resume PDF</a><a href="LucasBaqueroPO.pdf" download>Portfolio PDF</a><a href="mailto:Lucas.Baquero1@marist.edu">Contact</a></div></footer>
   </main>
 </body>
 </html>
