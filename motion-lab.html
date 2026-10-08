@@ -3,61 +3,86 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="CommandIQ Motion Lab: one-camera pitcher motion tracking paired with TrackMan ball flight.">
+  <meta name="theme-color" content="#0b0c0e">
+  <meta name="description" content="CommandIQ Motion Lab: one-camera pitcher joint tracking paired with TrackMan ball flight.">
   <meta property="og:title" content="CommandIQ Motion Lab | Lucas Baquero">
-  <meta property="og:description" content="One-camera pitcher motion, paired with TrackMan ball flight.">
+  <meta property="og:description" content="CommandIQ Motion Lab: one-camera pitcher joint tracking paired with TrackMan ball flight.">
   <meta property="og:type" content="article">
   <meta property="og:image" content="https://lbaquero33.github.io/motion-lab-joints.jpg">
   <meta name="twitter:card" content="summary_large_image">
   <title>CommandIQ Motion Lab | Lucas Baquero</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wdth,wght@0,62..125,100..900;1,62..125,100..900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <main>
     <header class="site-header">
       <a class="nameplate" href="index.html">Lucas Baquero</a>
-      <nav aria-label="Main navigation"><a href="index.html#work">Projects</a><a href="index.html#experience">Experience</a><a href="index.html#education">Education</a></nav>
-      <a class="resume-link" href="LucasBaqueroCV.pdf" download>Download resume</a>
+      <nav aria-label="Main navigation"><a href="index.html#work">Work</a><a href="index.html#experience">Experience</a><a href="index.html#contact">Contact</a></nav>
+      <a class="resume-link" href="LucasBaqueroCV.pdf" download>Resume ↓</a>
     </header>
 
     <section class="case-hero">
-      <a class="case-back" href="index.html#work">← All projects</a>
-      <p class="eyebrow">Single-camera motion review</p>
-      <h1>CommandIQ Motion Lab</h1>
-      <p class="case-deck">Turns video from one camera into a 3D estimate of a pitcher’s delivery, lined up with the TrackMan data for the same pitch</p>
+      <a class="case-back" href="index.html#work">← All work</a>
+      <p class="eyebrow">03 · Single-camera motion tracking</p>
+      <h1>CommandIQ<br>Motion Lab</h1>
+      <div class="tags"><span class="tag butler"><img src="logo-butler.png" alt="">Butler Baseball</span><span class="tag">Python · R · TrackMan</span></div>
+      <p class="case-deck">Point one camera at a bullpen. Motion Lab tracks the pitcher’s joints through the delivery, builds a 3D estimate, and lines it up with the TrackMan data for the same pitch.</p>
     </section>
+    <dl class="case-facts">
+      <div><dt>Input</dt><dd>Video from one fixed camera, plus a TrackMan export</dd></div>
+      <div><dt>Tracking</dt><dd>Up to 33 body points per frame</dd></div>
+      <div><dt>Output</dt><dd>A replay you can scrub and a coach report</dd></div>
+    </dl>
 
-    <section class="content-section" id="gallery" style="border-top:0;margin-top:12px">
-      <h2>Joint tracking on the camera view</h2>
-      <figure><a href="motion-lab-joints.jpg" target="_blank" rel="noopener"><img src="motion-lab-joints.jpg" alt="Four video frames of a pitcher at leg lift, foot contact, release and follow-through with tracked joints drawn over him"></a><figcaption>The model follows the throwing arm, shoulders, hips, knees and feet through the delivery, and flags four checkpoints for a person to confirm: leg lift, foot contact, release and follow-through.</figcaption></figure>
-    </section>
-
-    <section class="content-section">
-      <h2>Pitch replay</h2>
-      <div class="cols side top">
-        <figure><a href="motion-lab-pitch-replay.jpg" target="_blank" rel="noopener"><img src="motion-lab-pitch-replay.jpg" alt="Pitch replay screen with source video beside a 3D field view and TrackMan numbers above"></a><figcaption>The video plays beside a 3D field view, under the paired TrackMan numbers: 80.0 mph, 6.37 ft release height, 1,976 rpm.</figcaption></figure>
-        <div>
-          <p>The replay and a coach report both export from the session.</p>
-          <p class="quiet" style="margin-top:10px">The 3D motion is an estimate from one camera. It isn’t motion capture or a medical measurement, and TrackMan numbers are attached only after someone reviews the match.</p>
+    <section class="content-section" id="gallery">
+      <p class="eyebrow">Camera mapping</p>
+      <h2>Arm, hips and feet, frame by frame</h2>
+      <div class="split even top">
+        <figure><div class="shot"><video src="motion-lab-tracking.mp4" poster="motion-lab-release.jpg" autoplay muted loop playsinline controls aria-label="Video of a pitcher's delivery with tracked joints drawn over him"></video></div><figcaption><b>The tracking, running.</b> Every frame of the delivery gets a skeleton: throwing arm, shoulders, hips, knees and feet.</figcaption></figure>
+        <div class="copy">
+          <p>The model draws a skeleton over the pitcher in every frame, following the throwing arm from the glove break through release.</p>
+          <p>The counter in the corner shows how many of the 33 points it could see in that frame, so a reviewer knows when to trust it.</p>
         </div>
       </div>
     </section>
 
     <section class="content-section">
-      <h2>How it works</h2>
+      <p class="eyebrow">Checkpoints</p>
+      <h2>Four moments, confirmed by a person</h2>
+      <figure><a class="shot" href="motion-lab-joints.jpg" target="_blank" rel="noopener"><img src="motion-lab-joints.jpg" alt="Four frames of a pitcher at leg lift, foot contact, release and follow-through with tracked joints drawn over him" loading="lazy"></a></figure>
       <ul class="detail-list">
-        <li><strong>1. Import</strong><span>Bring in a recording from a fixed camera.</span></li>
-        <li><strong>2. Check</strong><span>Confirm the pitch match and the event markers: leg lift, foot contact, release, follow-through.</span></li>
-        <li><strong>3. Compare</strong><span>Look at the estimated motion next to the measured ball flight.</span></li>
+        <li><strong>Leg lift</strong><span>The peak of the front knee.</span></li>
+        <li><strong>Foot contact</strong><span>The front foot lands and the arm is loaded.</span></li>
+        <li><strong>Release</strong><span>The ball leaves the hand.</span></li>
+        <li><strong>Follow-through</strong><span>The arm finishes across the body.</span></li>
+      </ul>
+      <p class="section-copy">The model proposes each one as a candidate. Nothing counts until a reviewer confirms it.</p>
+    </section>
+
+    <section class="content-section">
+      <p class="eyebrow">Pitch replay</p>
+      <h2>Video, motion and ball flight on one playhead</h2>
+      <figure><a class="shot" href="motion-lab-pitch-replay.jpg" target="_blank" rel="noopener"><img src="motion-lab-pitch-replay.jpg" alt="Pitch replay screen with source video beside a 3D field view and TrackMan numbers above" loading="lazy"></a><figcaption><b>One pitch, three views.</b> The video plays beside a 3D field view, under the TrackMan numbers for that pitch: 80.0 mph, 6.37 ft release height, 5.35 ft extension, 1,976 rpm.</figcaption></figure>
+      <div class="project-note"><p><strong>What it is and isn’t.</strong> The 3D motion is an estimate from one camera. It isn’t motion capture or a medical measurement, and TrackMan numbers attach only after someone reviews the match.</p></div>
+    </section>
+
+    <section class="content-section">
+      <p class="eyebrow">Workflow</p>
+      <h2>From a phone video to a coach report</h2>
+      <ul class="detail-list">
+        <li><strong>1. Import</strong><span>Bring in a recording from a fixed camera and the TrackMan file from the same session.</span></li>
+        <li><strong>2. Match</strong><span>Confirm which TrackMan pitch belongs to which clip.</span></li>
+        <li><strong>3. Review</strong><span>Check the four checkpoints on the timeline.</span></li>
         <li><strong>4. Export</strong><span>Save a replay and a coach report.</span></li>
       </ul>
     </section>
 
     <section class="case-next"><a href="commandiq.html">Next project <span>CommandIQ →</span></a></section>
-    <footer><p>© 2026 Lucas Baquero</p><div><a href="index.html#work">All projects</a><a href="LucasBaqueroCV.pdf" download>Resume PDF</a><a href="LucasBaqueroPO.pdf" download>Portfolio PDF</a><a href="mailto:Lucas.Baquero1@marist.edu">Contact</a></div></footer>
+    <footer><p>© 2026 Lucas Baquero</p><div><a href="index.html#work">All work</a><a href="LucasBaqueroCV.pdf" download>Resume PDF</a><a href="LucasBaqueroPO.pdf" download>Portfolio PDF</a><a href="https://github.com/LBaquero33">GitHub</a><a href="mailto:Lucas.Baquero1@marist.edu">Email</a></div></footer>
   </main>
+  <script src="site.js"></script>
 </body>
 </html>

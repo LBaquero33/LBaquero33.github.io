@@ -3,46 +3,56 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0b0c0e">
   <meta name="description" content="MLB Attack Pitch Sequencer: a pitch plan for every count.">
   <meta property="og:title" content="MLB Attack: Pitch Sequencer | Lucas Baquero">
-  <meta property="og:description" content="A pitch plan for every count.">
+  <meta property="og:description" content="MLB Attack Pitch Sequencer: a pitch plan for every count.">
   <meta property="og:type" content="article">
   <meta property="og:image" content="https://lbaquero33.github.io/pitch-sequencer-excerpt.jpg">
   <meta name="twitter:card" content="summary_large_image">
   <title>MLB Attack: Pitch Sequencer | Lucas Baquero</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wdth,wght@0,62..125,100..900;1,62..125,100..900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <main>
     <header class="site-header">
       <a class="nameplate" href="index.html">Lucas Baquero</a>
-      <nav aria-label="Main navigation"><a href="index.html#work">Projects</a><a href="index.html#experience">Experience</a><a href="index.html#education">Education</a></nav>
-      <a class="resume-link" href="LucasBaqueroCV.pdf" download>Download resume</a>
+      <nav aria-label="Main navigation"><a href="index.html#work">Work</a><a href="index.html#experience">Experience</a><a href="index.html#contact">Contact</a></nav>
+      <a class="resume-link" href="LucasBaqueroCV.pdf" download>Resume ↓</a>
     </header>
 
     <section class="case-hero">
-      <a class="case-back" href="index.html#work">← All projects</a>
-      <p class="eyebrow">Pitch planning</p>
-      <h1>MLB Attack: Pitch Sequencer</h1>
-      <p class="case-deck">A pitch plan for every count</p>
+      <a class="case-back" href="index.html#work">← All work</a>
+      <p class="eyebrow">07 · Game planning</p>
+      <h1>MLB Attack:<br>Pitch Sequencer</h1>
+      <div class="tags"><span class="tag">R · Shiny</span></div>
+      <p class="case-deck">A one-page plan for how to attack a hitter. For every count it gives a first-choice pitch and location, plus a backup.</p>
     </section>
+    <dl class="case-facts">
+      <div><dt>Built with</dt><dd>R and Shiny</dd></div>
+      <div><dt>Inputs</dt><dd>Hitter tendencies and the pitcher’s arsenal</dd></div>
+      <div><dt>Output</dt><dd>12 counts, two times through the order</dd></div>
+    </dl>
 
-    <section class="content-section" style="border-top:0;margin-top:12px">
-      <div class="cols side top" style="grid-template-columns:minmax(200px,280px) 1fr">
-        <div>
-          <p class="lead" style="margin-top:0">For each count, the sequencer gives a first-choice pitch and location, plus a backup.</p>
-          <p style="margin-top:14px">It builds one plan for the first time through the order and another for the second.</p>
-          <p class="quiet" style="margin-top:10px">Shown: Aaron Nola against Gleyber Torres.</p>
+    <section class="content-section">
+      <p class="eyebrow">The sheet</p>
+      <h2>A plan for every count</h2>
+      <div class="split top" style="grid-template-columns:minmax(0,1.25fr) minmax(0,1fr)">
+        <figure><a class="paper" href="pitch-sequencer.jpg" target="_blank" rel="noopener"><img src="pitch-sequencer-crop.jpg" alt="Count-by-count pitch plan for Aaron Nola against Gleyber Torres, first and second time through the order" loading="lazy"></a><figcaption><b>Aaron Nola vs. Gleyber Torres.</b> Open for the full sheet.</figcaption></figure>
+        <div class="copy">
+          <p>Find the count, read the first call, keep the second one ready. Calls that are meant to get a chase say so.</p>
+          <p>The plan changes the second time through the order, because the hitter has already seen the stuff once.</p>
+          <p>It’s a planning aid, not an autopilot. A coach still weighs how the pitcher feels and what the game needs.</p>
         </div>
-        <figure class="paper"><a href="pitch-sequencer.jpg" target="_blank" rel="noopener"><img src="pitch-sequencer-crop.jpg" alt="Count-by-count pitch plan for Aaron Nola against Gleyber Torres, first and second time through the order"></a><figcaption>Open the image for the full sheet.</figcaption></figure>
       </div>
     </section>
 
-    <section class="case-next"><a href="ball-fox.html">Next project <span>Base Player Development Dashboard →</span></a></section>
-    <footer><p>© 2026 Lucas Baquero</p><div><a href="index.html#work">All projects</a><a href="LucasBaqueroCV.pdf" download>Resume PDF</a><a href="LucasBaqueroPO.pdf" download>Portfolio PDF</a><a href="mailto:Lucas.Baquero1@marist.edu">Contact</a></div></footer>
+    <section class="case-next"><a href="ball-fox.html">Next project <span>Player Development Dashboard →</span></a></section>
+    <footer><p>© 2026 Lucas Baquero</p><div><a href="index.html#work">All work</a><a href="LucasBaqueroCV.pdf" download>Resume PDF</a><a href="LucasBaqueroPO.pdf" download>Portfolio PDF</a><a href="https://github.com/LBaquero33">GitHub</a><a href="mailto:Lucas.Baquero1@marist.edu">Email</a></div></footer>
   </main>
+  <script src="site.js"></script>
 </body>
 </html>

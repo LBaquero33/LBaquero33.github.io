@@ -3,57 +3,89 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0b0c0e">
   <meta name="description" content="SelfScout College: drag-and-drop recruiting boards, depth charts and a scholarship dashboard for a college baseball staff.">
   <meta property="og:title" content="SelfScout College | Lucas Baquero">
-  <meta property="og:description" content="A recruiting workspace for a college baseball staff.">
+  <meta property="og:description" content="SelfScout College: drag-and-drop recruiting boards, depth charts and a scholarship dashboard for a college baseball staff.">
   <meta property="og:type" content="article">
   <meta property="og:image" content="https://lbaquero33.github.io/selfscout-boards.jpg">
   <meta name="twitter:card" content="summary_large_image">
   <title>SelfScout College | Lucas Baquero</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wdth,wght@0,62..125,100..900;1,62..125,100..900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <main>
     <header class="site-header">
       <a class="nameplate" href="index.html">Lucas Baquero</a>
-      <nav aria-label="Main navigation"><a href="index.html#work">Projects</a><a href="index.html#experience">Experience</a><a href="index.html#education">Education</a></nav>
-      <a class="resume-link" href="LucasBaqueroCV.pdf" download>Download resume</a>
+      <nav aria-label="Main navigation"><a href="index.html#work">Work</a><a href="index.html#experience">Experience</a><a href="index.html#contact">Contact</a></nav>
+      <a class="resume-link" href="LucasBaqueroCV.pdf" download>Resume ↓</a>
     </header>
 
     <section class="case-hero">
-      <a class="case-back" href="index.html#work">← All projects</a>
-      <p class="eyebrow">Recruiting</p>
-      <h1>SelfScout College</h1>
-      <p class="case-deck">A recruiting workspace for a college baseball staff</p>
+      <a class="case-back" href="index.html#work">← All work</a>
+      <p class="eyebrow">01 · Recruiting workspace</p>
+      <h1>SelfScout<br>College</h1>
+      <div class="tags"><span class="tag butler"><img src="logo-butler.png" alt="">Butler Baseball</span><span class="tag">TypeScript · React · Supabase</span></div>
+      <p class="case-deck">The whole recruiting picture for a college baseball staff in one workspace: who they like, where each player stands, who plays where next year, and what money is left.</p>
     </section>
-
-    <p class="lead">Recruiting boards, depth charts and scholarship money in one place, so the staff works from the same picture.</p>
+    <dl class="case-facts">
+      <div><dt>Built for</dt><dd>Butler Baseball’s coaching staff</dd></div>
+      <div><dt>Core screens</dt><dd>Boards, depth charts, scholarships, player profiles</dd></div>
+      <div><dt>Shown here</dt><dd>Sample players only, no real recruits</dd></div>
+    </dl>
 
     <section class="content-section" id="gallery">
-      <h2>Recruiting boards you drag</h2>
-      <figure><a href="selfscout-boards.jpg" target="_blank" rel="noopener"><img src="selfscout-boards.jpg" alt="2027 Pitchers board with Unranked, Priority, Follow and Watch List columns and one card being dragged"></a><figcaption><b>A card mid-drag.</b> Teodor Vance is being moved from Priority to Follow. The column lights up and a line shows where he’ll land.</figcaption></figure>
-      <div class="cols">
-        <p>Each board has its own tiers, and the staff names them: here it’s Priority, Follow and Watch List on the 2027 Pitchers board. Ranking a player is a drag up or down, and changing his tier is a drag across.</p>
-        <p>Every card carries position, class, where he stands (Offer, Visit, Contacted) and a 1–5 star rating. Players who are unrated, or not on the board yet, wait in the left column so nobody gets lost.</p>
+      <p class="eyebrow">Recruiting boards</p>
+      <h2>Boards you drag</h2>
+      <figure><a class="shot" href="selfscout-boards.jpg" target="_blank" rel="noopener"><img src="selfscout-boards.jpg" alt="2027 Pitchers board with Unranked, Priority, Follow and Watch List columns and one card being dragged" loading="lazy"></a><figcaption><b>A card mid-drag.</b> Teodor Vance is being moved from Priority to Follow. The column lights up and a line shows where he’ll land.</figcaption></figure>
+      <ul class="detail-list">
+        <li><strong>Tiers</strong><span>Each board has its own tiers, and the staff names them. Here it’s Priority, Follow and Watch List on the 2027 Pitchers board.</span></li>
+        <li><strong>Ranking</strong><span>Drag up or down to re-rank inside a tier. Drag across to change the tier.</span></li>
+        <li><strong>Cards</strong><span>Position, class, where he stands (Offer, Visit, Contacted) and a 1–5 star rating.</span></li>
+        <li><strong>Nobody lost</strong><span>Unrated players, and players not on the board yet, wait in the left column until someone places them.</span></li>
+        <li><strong>Print</strong><span>Any board prints as a sheet for the staff meeting.</span></li>
+      </ul>
+    </section>
+
+    <section class="content-section">
+      <p class="eyebrow">Depth chart</p>
+      <h2>Drag a name, change the lineup</h2>
+      <figure><a class="shot" href="selfscout-depth.jpg" target="_blank" rel="noopener"><img src="selfscout-depth.jpg" alt="Depth chart with a field diagram and a pitcher card being dragged to the top of the starting pitchers" loading="lazy"></a><figcaption><b>Re-ranking the rotation.</b> Lowell Tran is being pulled to the top of the starting pitchers, and the mound on the field lights up to match.</figcaption></figure>
+      <p class="section-copy">The roster sits on a field diagram beside a ranked list at every position. Tabs for 2027–28 and 2028–29 show the projected roster, seniors are flagged “may graduate,” and incoming players are marked.</p>
+    </section>
+
+    <section class="content-section">
+      <p class="eyebrow">Scholarship dashboard</p>
+      <h2>What’s left to spend</h2>
+      <figure><a class="shot" href="selfscout-scholarships.jpg" target="_blank" rel="noopener"><img src="selfscout-scholarships.jpg" alt="Scholarship dashboard showing money remaining for three seasons and each player’s share" loading="lazy"></a><figcaption><b>Three seasons at once.</b> Money remaining this year and the next two, with each player’s share of the pool.</figcaption></figure>
+      <p class="section-copy">The bar at the bottom splits this year’s money into committed, approved and still pending. A deal can carry a different amount each year, so the projection moves when an offer does.</p>
+    </section>
+
+    <section class="content-section">
+      <p class="eyebrow">Classes and profiles</p>
+      <h2>Every player, one click deep</h2>
+      <div class="duo">
+        <figure><a class="shot" href="selfscout-classes.jpg" target="_blank" rel="noopener"><img src="selfscout-classes.jpg" alt="Class overview listing 2027 and 2028 prospects with ratings and status" loading="lazy"></a><figcaption><b>Class overview.</b> 22 prospects, offers out, commits, average rating, and how many are still unrated.</figcaption></figure>
+        <figure><a class="shot" href="selfscout-profile.jpg" target="_blank" rel="noopener"><img src="selfscout-profile.jpg" alt="Player profile with a seven-stage recruiting pipeline" loading="lazy"></a><figcaption><b>Player profile.</b> Seven stages from new prospect to enrolled, with the scholarship deal and a move-to-roster button up top.</figcaption></figure>
+      </div>
+      <p class="section-copy">Ratings are entered by the staff, one tool at a time (hitting, power, running, fielding, arm, pitching, catching). A tool nobody has seen stays blank instead of getting a guess.</p>
+    </section>
+
+    <section class="content-section">
+      <p class="eyebrow">On a phone</p>
+      <h2>Works in the dugout</h2>
+      <div class="split top" style="grid-template-columns:auto minmax(0,1fr)">
+        <div class="phone"><img src="selfscout-phone.jpg" alt="Recruiting board on a phone with tier jump buttons" loading="lazy"></div>
+        <div class="copy"><p>On a phone the tiers become a jump bar, the columns go full width, and the touch targets get bigger. The same boards, built for a thumb.</p><p>Every name and number on this page is sample data, not a real recruit.</p></div>
       </div>
     </section>
 
-    <section class="content-section">
-      <h2>Depth chart</h2>
-      <figure><a href="selfscout-depth.jpg" target="_blank" rel="noopener"><img src="selfscout-depth.jpg" alt="Depth chart with a field diagram and ranked lists at each position"></a><figcaption>The roster sits on a field diagram, next to a ranked list at every position. Drag a name to change who starts or to try him somewhere else. Tabs for 2027–28 and 2028–29 show the projected roster, and seniors are flagged “may graduate.”</figcaption></figure>
-    </section>
-
-    <section class="content-section">
-      <h2>Scholarship dashboard</h2>
-      <figure><a href="selfscout-scholarships.jpg" target="_blank" rel="noopener"><img src="selfscout-scholarships.jpg" alt="Scholarship dashboard showing money remaining for three seasons and each player’s share"></a><figcaption>What’s left to spend this year and the next two, with each player’s share of the pool. The bar at the bottom splits this year’s money into committed, approved and still pending.</figcaption></figure>
-      <p class="section-copy">Every name and number on this page is sample data, not a real recruit.</p>
-    </section>
-
     <section class="case-next"><a href="butler-pitch-tunnel.html">Next project <span>Pitch Tunnel →</span></a></section>
-    <footer><p>© 2026 Lucas Baquero</p><div><a href="index.html#work">All projects</a><a href="LucasBaqueroCV.pdf" download>Resume PDF</a><a href="LucasBaqueroPO.pdf" download>Portfolio PDF</a><a href="mailto:Lucas.Baquero1@marist.edu">Contact</a></div></footer>
+    <footer><p>© 2026 Lucas Baquero</p><div><a href="index.html#work">All work</a><a href="LucasBaqueroCV.pdf" download>Resume PDF</a><a href="LucasBaqueroPO.pdf" download>Portfolio PDF</a><a href="https://github.com/LBaquero33">GitHub</a><a href="mailto:Lucas.Baquero1@marist.edu">Email</a></div></footer>
   </main>
+  <script src="site.js"></script>
 </body>
 </html>

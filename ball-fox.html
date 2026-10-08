@@ -3,43 +3,62 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0b0c0e">
   <meta name="description" content="Base Player Development Dashboard: college hitter and pitcher reports built in R and Shiny on TrackMan data.">
-  <meta property="og:title" content="Base Player Development Dashboard | Lucas Baquero">
-  <meta property="og:description" content="College hitter and pitcher reports built on TrackMan data.">
+  <meta property="og:title" content="Player Development Dashboard | Lucas Baquero">
+  <meta property="og:description" content="Base Player Development Dashboard: college hitter and pitcher reports built in R and Shiny on TrackMan data.">
   <meta property="og:type" content="article">
   <meta property="og:image" content="https://lbaquero33.github.io/ballfox-hitter.jpg">
   <meta name="twitter:card" content="summary_large_image">
-  <title>Base Player Development Dashboard | Lucas Baquero</title>
+  <title>Player Development Dashboard | Lucas Baquero</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wdth,wght@0,62..125,100..900;1,62..125,100..900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <main>
     <header class="site-header">
       <a class="nameplate" href="index.html">Lucas Baquero</a>
-      <nav aria-label="Main navigation"><a href="index.html#work">Projects</a><a href="index.html#experience">Experience</a><a href="index.html#education">Education</a></nav>
-      <a class="resume-link" href="LucasBaqueroCV.pdf" download>Download resume</a>
+      <nav aria-label="Main navigation"><a href="index.html#work">Work</a><a href="index.html#experience">Experience</a><a href="index.html#contact">Contact</a></nav>
+      <a class="resume-link" href="LucasBaqueroCV.pdf" download>Resume ↓</a>
     </header>
 
     <section class="case-hero">
-      <a class="case-back" href="index.html#work">← All projects</a>
-      <p class="eyebrow">College player development</p>
-      <h1>Base Player Development Dashboard</h1>
-      <p class="case-deck">Ball Fox Report samples from college baseball, built in R and Shiny on TrackMan data</p>
+      <a class="case-back" href="index.html#work">← All work</a>
+      <p class="eyebrow">08 · College player development</p>
+      <h1>Player Development<br>Dashboard</h1>
+      <div class="tags"><span class="tag">R · Shiny · TrackMan</span></div>
+      <p class="case-deck">Ball Fox reports for college hitters and pitchers. Each one is built around a question a coach would actually ask.</p>
       <div class="case-actions"><a class="case-button primary" href="https://ltbaquero.shinyapps.io/Marist_App/" target="_blank" rel="noreferrer">Open the Shiny app ↗</a></div>
     </section>
+    <dl class="case-facts">
+      <div><dt>Built with</dt><dd>R, Shiny, TrackMan exports</dd></div>
+      <div><dt>For</dt><dd>College players and coaches</dd></div>
+      <div><dt>Output</dt><dd>Player-level hitter and pitcher reports</dd></div>
+    </dl>
 
-    <section class="content-section" style="border-top:0;margin-top:12px">
-      <div class="case-gallery">
-        <figure class="paper"><a href="ballfox-hitter.jpg" target="_blank" rel="noopener"><img src="ballfox-hitter-crop.jpg" alt="Two-strike dashboard with a spray chart, whiff rate by zone and a summary table"></a><figcaption><b>Tim Flagger: two-strike dashboard.</b> Spray chart, whiff rate by zone, chase and contact, with plain-English answers about his two-strike approach.</figcaption></figure>
-        <figure class="paper"><a href="ballfox-pitcher.jpg" target="_blank" rel="noopener"><img src="ballfox-pitcher-crop.jpg" alt="Pitcher summary tables for results by pitch type, put-away pitches, usage by count and command"></a><figcaption><b>Carson Sentz: pitcher summary.</b> Results by pitch type, put-away pitches, usage by count and command, on one page a coach can read.</figcaption></figure>
+    <section class="content-section">
+      <p class="eyebrow">Hitter report</p>
+      <h2>What happens with two strikes?</h2>
+      <div class="split top" style="grid-template-columns:minmax(0,1.3fr) minmax(0,1fr)">
+        <figure><a class="paper" href="ballfox-hitter.jpg" target="_blank" rel="noopener"><img src="ballfox-hitter-crop.jpg" alt="Two-strike dashboard with a spray chart, whiff rate by zone and a summary table" loading="lazy"></a><figcaption><b>Tim Flagger: two-strike dashboard.</b></figcaption></figure>
+        <div class="copy"><p>A spray chart, whiff rate by zone, and chase and contact rates, all filtered to two-strike counts.</p><p>Under the charts the report answers four questions in plain English: does he fight pitches off, does he swing at strikes, does he chase, does he whiff too much.</p></div>
       </div>
     </section>
 
-    <section class="case-next"><a href="hitter-damage.html">Next project <span>Hitter Damage & Swing Efficiency →</span></a></section>
-    <footer><p>© 2026 Lucas Baquero</p><div><a href="index.html#work">All projects</a><a href="LucasBaqueroCV.pdf" download>Resume PDF</a><a href="LucasBaqueroPO.pdf" download>Portfolio PDF</a><a href="mailto:Lucas.Baquero1@marist.edu">Contact</a></div></footer>
+    <section class="content-section">
+      <p class="eyebrow">Pitcher report</p>
+      <h2>What’s working, and when?</h2>
+      <div class="split flip top" style="grid-template-columns:minmax(0,1.3fr) minmax(0,1fr)">
+        <figure><a class="paper" href="ballfox-pitcher.jpg" target="_blank" rel="noopener"><img src="ballfox-pitcher-crop.jpg" alt="Pitcher summary tables for results by pitch type, put-away pitches, usage by count and command" loading="lazy"></a><figcaption><b>Carson Sentz: pitcher summary.</b></figcaption></figure>
+        <div class="copy"><p>Results by pitch type, the put-away pitch with two strikes, usage when ahead, even and behind, and a command table (zone, edge, waste, chase).</p><p>One page a coach can read before a bullpen.</p></div>
+      </div>
+    </section>
+
+    <section class="case-next"><a href="selfscout.html">Next project <span>SelfScout →</span></a></section>
+    <footer><p>© 2026 Lucas Baquero</p><div><a href="index.html#work">All work</a><a href="LucasBaqueroCV.pdf" download>Resume PDF</a><a href="LucasBaqueroPO.pdf" download>Portfolio PDF</a><a href="https://github.com/LBaquero33">GitHub</a><a href="mailto:Lucas.Baquero1@marist.edu">Email</a></div></footer>
   </main>
+  <script src="site.js"></script>
 </body>
 </html>

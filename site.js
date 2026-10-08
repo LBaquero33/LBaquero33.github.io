@@ -18,3 +18,10 @@ document.querySelectorAll("[data-motion-toggle]").forEach((button) => {
     render();
   });
 });
+
+if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+  document.querySelectorAll("video[autoplay]").forEach((video) => {
+    video.removeAttribute("autoplay");
+    video.pause();
+  });
+}

@@ -3,56 +3,61 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0b0c0e">
   <meta name="description" content="CommandIQ: computer vision for reviewing a pitcher's intended target against where the pitch went.">
   <meta property="og:title" content="CommandIQ | Lucas Baquero">
-  <meta property="og:description" content="Computer vision for intended-location review.">
+  <meta property="og:description" content="CommandIQ: computer vision for reviewing a pitcher's intended target against where the pitch went.">
   <meta property="og:type" content="article">
   <meta property="og:image" content="https://lbaquero33.github.io/commandiq.jpeg">
   <meta name="twitter:card" content="summary_large_image">
   <title>CommandIQ | Lucas Baquero</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wdth,wght@0,62..125,100..900;1,62..125,100..900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <main>
     <header class="site-header">
       <a class="nameplate" href="index.html">Lucas Baquero</a>
-      <nav aria-label="Main navigation"><a href="index.html#work">Projects</a><a href="index.html#experience">Experience</a><a href="index.html#education">Education</a></nav>
-      <a class="resume-link" href="LucasBaqueroCV.pdf" download>Download resume</a>
+      <nav aria-label="Main navigation"><a href="index.html#work">Work</a><a href="index.html#experience">Experience</a><a href="index.html#contact">Contact</a></nav>
+      <a class="resume-link" href="LucasBaqueroCV.pdf" download>Resume ↓</a>
     </header>
 
     <section class="case-hero">
-      <a class="case-back" href="index.html#work">← All projects</a>
-      <p class="eyebrow">Computer vision</p>
+      <a class="case-back" href="index.html#work">← All work</a>
+      <p class="eyebrow">04 · Computer vision</p>
       <h1>CommandIQ</h1>
-      <p class="case-deck">Computer vision for intended-location review</p>
+      <div class="tags"><span class="tag">Swift · Python · Supabase</span></div>
+      <p class="case-deck">Command is the gap between where a pitch was supposed to go and where it went. CommandIQ draws the intended target on video so you can see that gap.</p>
     </section>
+    <dl class="case-facts">
+      <div><dt>Built with</dt><dd>Swift, Python, Supabase</dd></div>
+      <div><dt>Pitch data</dt><dd>TrackMan and Rapsodo exports</dd></div>
+      <div><dt>Output</dt><dd>Pitch-by-pitch review, saved sessions, report export</dd></div>
+    </dl>
 
-    <section class="content-section" style="border-top:0;margin-top:12px">
-      <figure><img src="commandiq.jpeg" alt="Game video with a crosshair drawn where the catcher set up"><figcaption><b>Target overlay on game video.</b> The crosshair marks where the catcher set up.</figcaption></figure>
-      <div class="cols" style="margin-top:28px">
-        <p class="lead" style="margin-top:0">CommandIQ draws the intended target on video, so you can see where a pitch was supposed to go and how far it missed.</p>
-        <div>
-          <p>It covers a full bullpen in one place: the video, target entry and pitch-by-pitch review.</p>
-          <p style="margin-top:10px">The user confirms each target, and the session exports as a report.</p>
-        </div>
-      </div>
+    <section class="content-section">
+      <p class="eyebrow">The review frame</p>
+      <h2>See the target. Review the miss.</h2>
+      <figure><a class="shot" href="commandiq.jpeg" target="_blank" rel="noopener"><img src="commandiq.jpeg" alt="Game video with a crosshair drawn where the catcher set up" loading="lazy"></a><figcaption><b>Target overlay on game video.</b> The crosshair marks where the catcher set up before the pitch.</figcaption></figure>
+      <p class="section-copy">The catcher’s glove before the pitch is the best public clue to where the pitch was meant to go. CommandIQ keeps that mark next to the measured result for every pitch in a bullpen.</p>
     </section>
 
     <section class="content-section">
-      <h2>How it works</h2>
+      <p class="eyebrow">Workflow</p>
+      <h2>The coach always has the last word</h2>
       <ul class="detail-list">
-        <li><strong>Import</strong><span>Reads pitch type, velocity and location from TrackMan or Rapsodo-style exports.</span></li>
-        <li><strong>Mark the target</strong><span>Click the catcher’s glove on the video, or start from a computer-vision suggestion.</span></li>
+        <li><strong>Import</strong><span>Reads pitch type, velocity and location from TrackMan or Rapsodo exports.</span></li>
+        <li><strong>Mark the target</strong><span>Click the glove on the video, or start from a computer-vision suggestion.</span></li>
         <li><strong>Confirm</strong><span>Nothing is applied until the coach confirms the target and the strike-zone calibration.</span></li>
-        <li><strong>Review</strong><span>Compare the confirmed target with where the pitch finished.</span></li>
+        <li><strong>Review</strong><span>Compare the confirmed target with where the pitch finished, then export the session as a report.</span></li>
       </ul>
     </section>
 
-    <section class="case-next"><a href="mlb-attack.html">Next project <span>MLB Attack: Pitch Sequencer →</span></a></section>
-    <footer><p>© 2026 Lucas Baquero</p><div><a href="index.html#work">All projects</a><a href="LucasBaqueroCV.pdf" download>Resume PDF</a><a href="LucasBaqueroPO.pdf" download>Portfolio PDF</a><a href="mailto:Lucas.Baquero1@marist.edu">Contact</a></div></footer>
+    <section class="case-next"><a href="hitter-damage.html">Next project <span>Hitter Damage →</span></a></section>
+    <footer><p>© 2026 Lucas Baquero</p><div><a href="index.html#work">All work</a><a href="LucasBaqueroCV.pdf" download>Resume PDF</a><a href="LucasBaqueroPO.pdf" download>Portfolio PDF</a><a href="https://github.com/LBaquero33">GitHub</a><a href="mailto:Lucas.Baquero1@marist.edu">Email</a></div></footer>
   </main>
+  <script src="site.js"></script>
 </body>
 </html>
